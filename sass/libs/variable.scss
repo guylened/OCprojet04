@@ -1,10 +1,10 @@
 /*fonts*/
-$font-light: "Roboto", sans-serif 300 normal;
-$font-regular: "Roboto", sans-serif 400 normal;
-$font-medium: "Roboto", sans-serif 500 normal;
-$font-bold: "Roboto", sans-serif 700 normal;
+$font-light: 300 normal;
+$font-regular: 400 normal;
+$font-medium: 500 normal;
+$font-bold: 700 normal;
 
-$font-title: "Shrikhand", serif 400 normal; 
+$font-title: 400 normal; 
 
 
 /* colors
@@ -12,7 +12,7 @@ $font-title: "Shrikhand", serif 400 normal;
  gris clair #EAEAEA = 8.2%
  gris moyen #7E7E7E = 50.6%
  gris foncé #353535 = 79.2%
- gris sombre #101010 = 93.7%
+ gris coeur #101010 = 93.7%
  gris shadow-btn #bfbfbf = 25%
  gris shadow-card #d9d9d9 = 15%
  gris shadow-menu #e5e5e5 = 10%
@@ -22,9 +22,17 @@ $primary-color: #9356DC;
 $second-color: #FF79DA;
 $third-color: #99E2D0;
 $white-grey-black: white;
-$gradient-btn: linear-gradient(193deg, $primary-color -11.44%, $second-color 123.93%);
+$light-grey: darken($white-grey-black,8.2);
+$medium-grey: darken($white-grey-black,50.6);
+$dark-grey: darken($white-grey-black,79.2);
 $border-heart: darken($white-grey-black,93.7);
+$gradient-btn: linear-gradient(193deg, $primary-color -11.44%, $second-color 123.93%);
+
+/* à tester et modifier
 $gradient-form: linear-gradient(190deg, darken($white-grey-black,15), darken($white-grey-black,8.2));
+
+*/
+
 
 
 

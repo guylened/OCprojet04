@@ -7,10 +7,15 @@
 
 /* général */
 
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+
 body {
     display: flex;
     flex-direction: column;
-    align-content: center;
+    align-content: center;    
     max-width: 767px;
     width: 100%;
     background-color: $white-grey-black;    
@@ -21,6 +26,65 @@ body {
 } 
 
 .title-restaurant {
-    font: $font-title 28px;
+    font: 'Shrikhand', serif  $font-title 28px;
 } 
 
+.btn {
+    border-radius: $radius15;
+    background-color: $gradient-btn;
+    height: 50px;
+}
+
+
+/* header */
+
+
+header {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    height: 63px;
+}
+
+/* form*/
+
+
+.form-search {
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    height: 50px;
+    background: $light-grey;
+    & .form {
+        display: flex;
+        justify-content: center;    
+        align-items: center;
+        gap: 17px;
+
+        .fa-location-dot {
+            color: $dark-grey;
+        }
+
+        input {
+            font: 16px; 
+            font-weight: 500;
+            color: $dark-grey;
+            &::placeholder {
+                color: $dark-grey;
+            }
+        }
+        
+    }
+}
+
+/* title */
+
+
+/* info */
+
+
+/* restaurants*/
+
+
+/* footer*/
