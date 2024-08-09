@@ -1,8 +1,26 @@
-@import "libs/media-queries.scss";
 @import "libs/reset-css.scss";
-@import "libs/font-color.scss";
 @import "libs/responsive.scss";
 @import "libs/variable.scss";
 @import "libs/mixin.scss";
 @import "libs/fonction.scss";
+
+
+/* général */
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    max-width: 767px;
+    width: 100%;
+    background-color: $white-grey-black;    
+}
+
+.title-homepage {
+    font: $font-bold 24px;
+} 
+
+.title-restaurant {
+    font: $font-title 28px;
+} 
 

@@ -1,0 +1,45 @@
+/*fonts*/
+$font-light: "Roboto", sans-serif 300 normal;
+$font-regular: "Roboto", sans-serif 400 normal;
+$font-medium: "Roboto", sans-serif 500 normal;
+$font-bold: "Roboto", sans-serif 700 normal;
+
+$font-title: "Shrikhand", serif 400 normal; 
+
+
+/* colors
+ pourcentage pour couleurs grises 
+ gris clair #EAEAEA = 8.2%
+ gris moyen #7E7E7E = 50.6%
+ gris foncé #353535 = 79.2%
+ gris sombre #101010 = 93.7%
+ gris shadow-btn #bfbfbf = 25%
+ gris shadow-card #d9d9d9 = 15%
+ gris shadow-menu #e5e5e5 = 10%
+*/
+
+$primary-color: #9356DC;
+$second-color: #FF79DA;
+$third-color: #99E2D0;
+$white-grey-black: white;
+$gradient-btn: linear-gradient(193deg, $primary-color -11.44%, $second-color 123.93%);
+$border-heart: darken($white-grey-black,93.7);
+$gradient-form: linear-gradient(190deg, darken($white-grey-black,15), darken($white-grey-black,8.2));
+
+
+
+/* shadows*/
+$btn-shadow: 0px 4px 10px 0px darken($white-grey-black,25);
+$card-shadow: 0px 4px 15px 0px darken($white-grey-black,15);
+$card-menu-shadow: 0px 4px 15px 0px darken($white-grey-black,10);
+$form-shadow: 0px 4px 4px 0px darken($white-grey-black,15);
+$badge-shadow: 0px 2px 4px 0px darken($white-grey-black,15);
+
+/*radius
+card fonctionnement : +5px
+btn : +10px
+badge: -13px
+*/
+$radius15: 15px;
+
+

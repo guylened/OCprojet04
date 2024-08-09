@@ -1,21 +1,4 @@
-@media only screen and (min-width: 320px) and (max-width: 767px) {
-  body {
-    max-width: 767px;
-    min-width: 320px;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-  body {
-    max-width: 1023px;
-    min-width: 768px;
-  }
-}
-@media only screen and (min-width: 1024px) and (max-width: 1440px) {
-  body {
-    max-width: 1440px;
-    min-width: 1024px;
-  }
-}
+@charset "UTF-8";
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
@@ -60,16 +43,48 @@ td, th {
   padding: 0;
 }
 
-* {
-  font-family: "Roboto", sans-serif;
-  /*
-  font-family: 'Shrikhand', serif; */
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-:root {
-  --primary-color: #9356DC;
-  --second-color: #FF79DA;
-  --third-color: #99E2D0;
+input {
+  border-style: none;
+}
+
+/*fonts*/
+/* colors
+ pourcentage pour couleurs grises 
+ gris clair #EAEAEA = 8.2%
+ gris moyen #7E7E7E = 50.6%
+ gris foncé #353535 = 79.2%
+ gris sombre #101010 = 93.7%
+ gris shadow-btn #bfbfbf = 25%
+ gris shadow-card #d9d9d9 = 15%
+ gris shadow-menu #e5e5e5 = 10%
+*/
+/* shadows*/
+/*radius
+card fonctionnement : +5px
+btn : +10px
+badge: -13px
+*/
+/* général */
+body {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  max-width: 767px;
+  width: 100%;
+  background-color: white;
+}
+
+.title-homepage {
+  font: "Roboto", sans-serif 700 normal 24px;
+}
+
+.title-restaurant {
+  font: "Shrikhand", serif 400 normal 28px;
 }
 
 /*# sourceMappingURL=style.css.map */
