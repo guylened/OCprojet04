@@ -1,17 +1,143 @@
-/* Error: expected "{".
- *    ,
- * 84 |     extend
- *    |           ^
- *    '
- *   sass\style.scss 84:11  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: expected "{".\a    \2577 \a 84 \2502      extend\d\a    \2502            ^\a    \2575 \a   sass\\style.scss 84:11  root stylesheet';
+@charset "UTF-8";
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input, select {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+img, video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input {
+  all: unset;
+}
+
+/*fonts*/
+/* colors
+ pourcentage pour couleurs grises 
+ gris clair #EAEAEA = 8.2%
+ gris moyen #7E7E7E = 50.6%
+ gris foncé #353535 = 79.2%
+ gris coeur #101010 = 93.7%
+ gris shadow-btn #bfbfbf = 25%
+ gris shadow-card #d9d9d9 = 15%
+ gris shadow-menu #e5e5e5 = 10%
+*/
+/* shadows*/
+/*radius
+card fonctionnement : +5px
+btn : +10px
+badge: -13px
+*/
+/* général */
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  max-width: 767px;
+  width: 100%;
+  background-color: white;
+}
+
+.title-homepage {
+  font: 700 normal em(24);
+}
+
+.title-restaurant {
+  font: "Shrikhand", serif, 400 normal em(28);
+}
+
+.btn {
+  border-radius: 15px;
+  background: linear-gradient(170deg, #FF79DA, #9356DC 70%);
+  height: 50px;
+  border: none;
+  color: white;
+  box-shadow: 0px 4px 10px 0px #bfbfbf;
+}
+
+/* header */
+header {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: 63px;
+}
+
+/* form*/
+.form-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background: #eaeaea;
+}
+.form-search .form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+}
+.form-search .form .fa-location-dot {
+  color: #353535;
+}
+.form-search .form input {
+  font: 16px;
+  font-weight: 500;
+  color: #353535;
+}
+.form-search .form input::placeholder {
+  color: #353535;
+}
+
+/* title */
+/* info */
+/* restaurants*/
+/* footer*/
+
+/*# sourceMappingURL=style.css.map */

@@ -22,17 +22,21 @@ body {
 }
 
 .title-homepage {
-    font: $font-bold 24px;
+    font: $font-bold em(24);
 } 
 
 .title-restaurant {
-    font: 'Shrikhand', serif  $font-title 28px;
+    font: $font-title em(28);
 } 
 
 .btn {
     border-radius: $radius15;
-    background-color: $gradient-btn;
+    background: $gradient-btn;
     height: 50px;
+    border: none;
+    color: $white-grey-black;
+    box-shadow: $btn-shadow;
+    
 }
 
 
