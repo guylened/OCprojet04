@@ -1,14 +1,17 @@
-/*fonts*/
-$font-light: 300 normal;
-$font-regular: 400 normal;
-$font-medium: 500 normal;
-$font-bold: 700 normal;
+/*fonts
+light: 300 
+regular: 400 
+medium: 500 
+bold: 700 
+*/
 
-$font-title: 'Shrikhand', serif, 400 normal; 
+$font-Shrikhand: 'Shrikhand', serif; 
+$font-Roboto: 'Roboto', sans-serif;
 
 
 /* colors
  pourcentage pour couleurs grises 
+ gris très clair #F6F6F6 = 3.5%
  gris clair #EAEAEA = 8.2%
  gris moyen #7E7E7E = 50.6%
  gris foncé #353535 = 79.2%
@@ -22,6 +25,7 @@ $primary-color: #9356DC;
 $second-color: #FF79DA;
 $third-color: #99E2D0;
 $white-grey-black: white;
+$lighter-grey: darken($white-grey-black,3.5);
 $light-grey: darken($white-grey-black,8.2);
 $medium-grey: darken($white-grey-black,50.6);
 $dark-grey: darken($white-grey-black,79.2);
@@ -39,10 +43,12 @@ $form-shadow: 0px 4px 4px 0px darken($white-grey-black,15);
 $badge-shadow: 0px 2px 4px 0px darken($white-grey-black,15);
 
 /*radius
-card fonctionnement : +5px
-btn : +10px
-badge: -13px
+card fonctionnement : 20px
+btn : 25px
+badge: 2px
 */
-$radius15: 15px;
+
+
+
 
 

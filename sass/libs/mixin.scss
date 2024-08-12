@@ -1,0 +1,21 @@
+
+@mixin Shrikhand($f-s,$f-c) {
+    font-family: $font-Shrikhand;    
+    font-weight: 400;
+    font-size: $f-s;
+    color: $f-c;
+}
+
+@mixin Roboto($f-w,$f-s,$f-c) {
+    font-family: $font-Roboto;    
+    font-weight: $f-w;
+    font-size: $f-s;
+    color: $f-c;
+}
+
+@mixin Flexbox($fx-dir,$jy-ct,$al-ct,) {
+    display: flex;
+    flex-direction: $fx-dir;
+    justify-content:$jy-ct;
+    align-content:$al-ct;    
+}

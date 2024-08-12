@@ -25,24 +25,29 @@
                 <input type="search" id="location" name="q" placeholder="Paris, Belleville">                
             </form>  
         </section>
-        <section>
-            <h1>Réservez le menu qui vous convient</h1>
-            <h2>Découvrez des restaurants d'exception, sélectionnés par nos soins</h2>
+        <section class="titles">
+            <h1 class="title-homepage">Réservez le menu qui vous convient</h1>
+            <h2 class="subtitle-homepage">Découvrez des restaurants d'exception, sélectionnés par nos soins</h2>
             <button class="btn">Explorez nos restaurants</button>
         </section>
-        <section>
-            <h2>Fonctionnement</h2>
-            <h3><i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i>Choisissez un restaurant</h3>
-            <h3><i class="fa-solid fa-list-ul" aria-hidden="true"></i>Composez votre menu</h3>
-            <h3><i class="fa-solid fa-store" aria-hidden="true"></i>Dégustez au restaurant</h3>
+        <section class="info">
+            <h2 class="title-homepage">Fonctionnement</h2>
+            <div class="info-cards">
+                <h3 class="card"><i class="fa-solid fa-mobile-screen-button fa-style-grey" aria-hidden="true"></i>Choisissez un restaurant</h3>
+                <p class="bulle">1</p>
+                <h3 class="card"><i class="fa-solid fa-list-ul fa-style-grey" aria-hidden="true"></i>Composez votre menu</h3>
+                <p class="bulle">2</p>
+                <h3 class="card"><i class="fa-solid fa-store fa-style-violet" aria-hidden="true"></i>Dégustez au restaurant</h3>
+                <p class="bulle">3</p>
+            </div>            
         </section>
-        <section>
+        <section class="restaurants">
             <h2>Restaurants</h2>
             <div class="restaurants-cards">
                 <a href="#">
                     <article class="card">
                         <img src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="assiette contenant une entrée posée sur une table en bois avec un panier de pain">
-                        <div>
+                        <div class="badge">
                             <p>Nouveau</p>
                         </div>
                         <div class="card-content">
@@ -113,13 +118,11 @@
         </section>
     </main>
     <footer>
-        <section>
-            <img src="./assets/images/logo/ohmyfood@2x.svg" alt="Logo OhMyFood">
-            <a href="#"><i class="fa-solid fa-utensils" aria-hidden="true"></i>Proposer un restaurant</a>
-            <a href="#"><i class="fa-solid fa-handshake-angle" aria-hidden="true"></i>Devenir partenaire</a>
-            <a href="#">Mentions légales</a>
-            <a href="mailto">Contact</a>
-        </section>        
+            <h2>ohmyfood</h2>
+            <a href="#"><i class="fa-solid fa-utensils fa-style" aria-hidden="true"></i>Proposer un restaurant</a>
+            <a href="#"><i class="fa-solid fa-handshake-angle fa-style" aria-hidden="true"></i>Devenir partenaire</a>
+            <a href="#"><p>Mentions légales</p></a>
+            <a href="mailto"><p>Contact</p></a>             
     </footer>
 </body>
 </html>

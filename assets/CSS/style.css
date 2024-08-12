@@ -52,9 +52,15 @@ input {
   all: unset;
 }
 
-/*fonts*/
+/*fonts
+light: 300 
+regular: 400 
+medium: 500 
+bold: 700 
+*/
 /* colors
  pourcentage pour couleurs grises 
+ gris très clair #F6F6F6 = 3.5%
  gris clair #EAEAEA = 8.2%
  gris moyen #7E7E7E = 50.6%
  gris foncé #353535 = 79.2%
@@ -65,9 +71,9 @@ input {
 */
 /* shadows*/
 /*radius
-card fonctionnement : +5px
-btn : +10px
-badge: -13px
+card fonctionnement : 20px
+btn : 25px
+badge: 2px
 */
 /* général */
 * {
@@ -77,67 +83,264 @@ badge: -13px
 body {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-content: center;
   max-width: 767px;
   width: 100%;
   background-color: white;
 }
 
-.title-homepage {
-  font: 700 normal em(24);
-}
-
-.title-restaurant {
-  font: "Shrikhand", serif, 400 normal em(28);
-}
-
 .btn {
-  border-radius: 15px;
-  background: linear-gradient(170deg, #FF79DA, #9356DC 70%);
   height: 50px;
+  max-width: 220px;
+  border-radius: 25px;
+  margin: 30px;
+  padding: 15px;
+  background: linear-gradient(170deg, #FF79DA, #9356DC 70%);
   border: none;
-  color: white;
   box-shadow: 0px 4px 10px 0px #bfbfbf;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: em(16);
+  color: white;
 }
 
 /* header */
 header {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-content: center;
-  align-items: center;
   height: 63px;
 }
 
 /* form*/
 .form-search {
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-content: center;
   align-items: center;
   height: 50px;
-  background: #eaeaea;
+  background: linear-gradient(180deg, #d9d9d9, #eaeaea 3%);
+  box-shadow: 0px 4px 4px 0px #d9d9d9;
 }
 .form-search .form {
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
-  gap: 17px;
+  align-content: center;
+  gap: 3px;
 }
 .form-search .form .fa-location-dot {
   color: #353535;
 }
 .form-search .form input {
-  font: 16px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
+  font-size: em(16);
   color: #353535;
 }
 .form-search .form input::placeholder {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: em(16);
   color: #353535;
 }
 
 /* title */
+.titles {
+  text-align: center;
+  padding: 30px;
+  background: #f6f6f6;
+}
+.titles h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: em(24);
+  color: black;
+  padding: 20px 0;
+}
+.titles h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: em(18);
+  color: #353535;
+}
+
 /* info */
+.fa-style-grey {
+  color: #7e7e7e;
+  margin-left: 50px;
+}
+
+.fa-style-violet {
+  color: #9356DC;
+  margin-left: 50px;
+}
+
+.info {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.info-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+.info-cards .card {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 72px;
+  width: 100%;
+  background: #f6f6f6;
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px 0px #d9d9d9;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: em(16);
+  color: black;
+}
+.info-cards .bulle {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: em(14);
+  color: white;
+  text-align: center;
+  align-items: center;
+  padding: 5px;
+  height: 30px;
+  width: 30px;
+  background-color: #9356DC;
+  border-radius: 50%;
+  border: none;
+}
+
 /* restaurants*/
+.restaurants {
+  background: #eaeaea;
+  padding: 55px 18px 40px;
+}
+
+.restaurants-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  gap: 18px;
+}
+.restaurants-cards .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-content: center;
+  gap: 16px;
+  width: 100%;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0px 4px 15px 0px #d9d9d9;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: em(16);
+  color: black;
+}
+.restaurants-cards .card img {
+  width: 100%;
+  height: 231px;
+  border-radius: 15px 15px 0 0;
+  object-fit: cover;
+}
+.restaurants-cards .card .badge {
+  position: absolute;
+  margin: 15px;
+  padding: 7px 9px;
+  background: #99E2D0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: em(14);
+  color: #2c9c81;
+}
+.restaurants-cards .card .card-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  width: 100%;
+  padding: 0 25px 15px 13px;
+  height: calc(100% - 231px);
+}
+.restaurants-cards .card .card-content .card-txt {
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+.restaurants-cards .card .card-content .card-txt .card-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: em(18);
+  color: black;
+}
+.restaurants-cards .card .card-content .card-txt .card-subtitle {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: em(17);
+  color: #353535;
+}
+.restaurants-cards .card .card-content .card-heart {
+  color: #101010;
+}
+.restaurants-cards .card .card-content .card-heart:hover {
+  color: #9356DC;
+}
+
 /* footer*/
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: flex-start;
+  gap: 15px;
+  background: #353535;
+  padding: 55px 18px 40px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: em(16);
+  color: white;
+}
+footer .fa-style {
+  margin-right: 10px;
+}
+footer h2 {
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  font-size: em(18);
+  color: white;
+}
+footer p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: em(16);
+  color: white;
+}
+
+/* Pages restaurants*/
+.title-restaurant {
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  font-size: 18;
+  color: black;
+}
 
 /*# sourceMappingURL=style.css.map */
