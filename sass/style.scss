@@ -29,10 +29,13 @@ body {
     background: $gradient-btn;
     border: none;
     box-shadow: $btn-shadow;
-    @include Roboto(500,em(16),white);    
+    @include Roboto(500,rem(16),white);    
 }
 
-
+.title-homepage {
+    @include Roboto(700,rem(24),black); 
+    margin: 0 0 25px 0;
+}
 
 
 /* header */
@@ -52,6 +55,8 @@ header {
     height: 50px;
     background: $gradient-form;
     box-shadow: $form-shadow;
+    margin:0  0 4px  0;
+    z-index: 1;
     .form {
         @include Flexbox(row,center,center);
         gap: 3px;
@@ -62,9 +67,9 @@ header {
 
         input {   
             text-align: center;         
-            @include Roboto(500,em(16),$dark-grey);            
+            @include Roboto(500,rem(16),$dark-grey);            
             &::placeholder {
-                @include Roboto(500,em(16),$dark-grey); 
+                @include Roboto(500,rem(16),$dark-grey); 
             }
         }
         
@@ -76,13 +81,14 @@ header {
 .titles { 
    text-align: center;
    padding:30px;
-   background: $lighter-grey;
+   background: $lighter-grey;  
+   z-index: 0; 
    h1 {
-    @include Roboto(700,em(24),black);
-    padding: 20px 0;
+    @include Roboto(700,rem(24),black);
+    padding: 14px 0;
    }   
    h2 {
-    @include Roboto(300,em(18),$dark-grey);
+    @include Roboto(300,rem(18),$dark-grey);
 
    }
 }
@@ -102,7 +108,7 @@ header {
 
 
 .info {
-    margin: 20px;
+    margin: 45px 20px 40px;
     @include Flexbox(column,center,center);
 }
 
@@ -117,11 +123,11 @@ header {
         background: $lighter-grey;
         border-radius: 20px;
         box-shadow: $card-shadow;
-        @include Roboto(500,em(16),black);              
+        @include Roboto(500,rem(16),black);              
     }
     
     .bulle {
-        @include Roboto(500,em(14),white); 
+        @include Roboto(500,rem(14),white); 
         text-align: center;
         align-items: center;
         padding: 5px;    
@@ -140,7 +146,7 @@ header {
 
 .restaurants {
     background: $light-grey;
-    padding: 55px 18px 40px;
+    padding: 45px 18px 65px;
 }
 
 .restaurants-cards {
@@ -155,7 +161,7 @@ header {
         border-radius: 15px;
         background: $white-grey-black;
         box-shadow: $card-shadow;
-        @include Roboto(500,em(16),black);                     
+        @include Roboto(500,rem(16),black);                     
     }
     .card img {
         width: 100%;
@@ -169,7 +175,7 @@ header {
         margin: 15px;
         padding: 7px 9px;
         background: $third-color;
-        @include Roboto(500,em(14),darken($third-color, 35));
+        @include Roboto(500,rem(14),darken($third-color, 35));
         
     }
     .card .card-content {
@@ -182,11 +188,11 @@ header {
             gap:5px;
             @include Flexbox(column,center,center);          
             .card-title {
-                @include Roboto(500,em(18),black);
+                @include Roboto(500,rem(18),black);
             }
 
             .card-subtitle {
-                @include Roboto(300,em(17),$dark-grey);
+                @include Roboto(300,rem(17),$dark-grey);
             }
         }   
         .card-heart {
@@ -203,25 +209,34 @@ header {
 
 footer {
 @include Flexbox(column,center,flex-start); 
-gap: 15px;
+gap: 18px;
 background: $dark-grey;
-padding: 55px 18px 40px;
-@include Roboto(500,em(16),white);   
+padding: 30px 18px 40px;
+@include Roboto(500,rem(16),white);
+   
+    h2 {
+    @include Shrikhand(rem(18), white);
+    }
+
+    .link {
+    @include Flexbox(column,center,flex-start); 
+    gap: 10px; 
+
     .fa-style {
         margin-right: 10px;
     }
-    h2 {
-        @include Shrikhand(em(18), white);
-    }
-
    
-    p {
-        @include Roboto(300,em(16),white);   
+    .light-link {
+        @include Roboto(300,rem(16),white);   
+       }  
 
     }
+
+    
+
+     
+
 }
-
-
 
 /* Pages restaurants*/
 
