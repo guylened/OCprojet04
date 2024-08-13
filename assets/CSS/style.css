@@ -341,7 +341,7 @@ footer .link {
   flex-direction: column;
   justify-content: center;
   align-content: flex-start;
-  gap: 10px;
+  gap: 8px;
 }
 footer .link .fa-style {
   margin-right: 10px;

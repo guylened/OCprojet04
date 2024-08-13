@@ -220,7 +220,7 @@ padding: 30px 18px 40px;
 
     .link {
     @include Flexbox(column,center,flex-start); 
-    gap: 10px; 
+    gap: 8px; 
 
     .fa-style {
         margin-right: 10px;
@@ -231,10 +231,6 @@ padding: 30px 18px 40px;
        }  
 
     }
-
-    
-
-     
 
 }
 
