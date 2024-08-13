@@ -11,94 +11,85 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="./assets/CSS/style.css">
+    <link rel="stylesheet" href="../assets/CSS/style.css">
 </head>
 <body>
     <header>
-        <img src="./assets/images/logo/ohmyfood@2x.svg" alt="Logo OhMyFood">
+        <img src="../assets/images/logo/ohmyfood@2x.svg" alt="Logo OhMyFood">
         <nav>
             <a href="#"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i></a>
         </nav>
     </header>
     <main>
         <section>
-            <img src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="assiette contenant une entrée posée sur une table en bois avec un panier de pain">
+            <img src="../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="assiette contenant une entrée posée sur une table en bois avec un panier de pain">
         </section>
-              
-        <section>
+        <section class="menu">
             <h2>La palette du goût</h2>
-            <div class="restaurants-cards">
-                <h3>Entrée</h3>
-                <a href="#">
+            <div class="card-heart">
+                <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                <span class="sr-only">Favoris</span>
+            </div>
+            <div class="menu-cards">
+                <div class="menu-title">
+                    <h3>Entrée</h3>                    
+                </div>                                
                     <article class="card">
                         <div class="card-content">
                             <div class="card-txt">
                                 <h3 class="card-title">La palette du goût</h3>
                                 <p class="card-subtitle">Ménilmontant</p>
                             </div>
-                            <div class="card-heart">
-                                <i class="fa-regular fa-heart" aria-hidden="true"></i>
-                                <i class="fa-solid fa-heart" aria-hidden="true"></i>
-                                <span class="sr-only">Favoris</span>
-                            </div>
+                            <div>
+                                <p>25€</p>
+                            </div>                            
                         </div>
                     </article>
-                </a>
-                <a href="#">
                     <article class="card">
                         <div class="card-content">
                             <div class="card-txt">
-                                <h3 class="card-title">La note enchantée</h3>
-                                <p class="card-subtitle">Charonne</p>
+                                <h3 class="card-title">La palette du goût</h3>
+                                <p class="card-subtitle">Ménilmontant</p>
                             </div>
-                            <div class="card-heart">
-                                <i class="fa-regular fa-heart" aria-hidden="true"></i>
-                                <i class="fa-solid fa-heart" aria-hidden="true"></i>
-                                <span class="sr-only">Favoris</span>
-                            </div>
+                            <div>
+                                <p>25€</p>
+                            </div>                            
                         </div>
                     </article>
-                </a>
-                <a href="#">
                     <article class="card">
-                       <div class="card-content">
+                        <div class="card-content">
                             <div class="card-txt">
-                                <h3 class="card-title">A la française</h3>
-                                <p class="card-subtitle">Cité Rouge</p>
+                                <h3 class="card-title">La palette du goût</h3>
+                                <p class="card-subtitle">Ménilmontant</p>
                             </div>
-                            <div class="card-heart">
-                                <i class="fa-regular fa-heart" aria-hidden="true"></i>
-                                <i class="fa-solid fa-heart" aria-hidden="true"></i>
-                                <span class="sr-only">Favoris</span>
-                            </div>
+                            <div>
+                                <p>25€</p>
+                            </div>                            
                         </div>
                     </article>
-                </a>
-                <a href="#">
                     <article class="card">
-                        <div class="card-txt">
-                                <h3 class="card-title">Les délice des sens</h3>
-                                <p class="card-subtitle">Folie-Méricourt</p>
+                        <div class="card-content">
+                            <div class="card-txt">
+                                <h3 class="card-title">La palette du goût</h3>
+                                <p class="card-subtitle">Ménilmontant</p>
                             </div>
-                            <div class="card-heart">
-                                <i class="fa-regular fa-heart" aria-hidden="true"></i>
-                                <i class="fa-solid fa-heart" aria-hidden="true"></i>
-                                <span class="sr-only">Favoris</span>
-                            </div>
+                            <div>
+                                <p>25€</p>
+                            </div>                            
                         </div>
                     </article>
-                </a>               
             </div>
         </section>
     </main>
     <footer>
-        <section>
-            <img src="./assets/images/logo/ohmyfood@2x.svg" alt="Logo OhMyFood">
-            <a href="#"><i class="fa-solid fa-utensils" aria-hidden="true"></i>Proposer un restaurant</a>
-            <a href="#"><i class="fa-solid fa-handshake-angle" aria-hidden="true"></i>Devenir partenaire</a>
-            <a href="#">Mentions légales</a>
-            <a href="mailto">Contact</a>
-        </section>        
+        <h2>ohmyfood</h2>            
+            <div class="link">
+            <a href="#"><i class="fa-solid fa-utensils fa-style" aria-hidden="true"></i>Proposer un restaurant</a>
+            <a href="#"><i class="fa-xs fa-solid fa-handshake-angle fa-style" aria-hidden="true"></i>Devenir partenaire</a>
+            <a href="#" class="light-link">Mentions légales</a>
+            <a href="mailto" class="light-link">Contact</a>
+            </div>         
     </footer>
 </body>
 </html>
