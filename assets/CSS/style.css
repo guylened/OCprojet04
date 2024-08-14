@@ -208,6 +208,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-content: center;
+  gap: 20px;
 }
 .info-cards .card {
   display: flex;
@@ -226,7 +227,7 @@ header {
   font-size: 1em;
   color: black;
   position: relative;
-  z-index: 1;
+  z-index: 0;
 }
 .info-cards .bulle {
   font-family: "Roboto", sans-serif;
@@ -240,10 +241,10 @@ header {
   background-color: #9356DC;
   border-radius: 50%;
   border: none;
-  position: relative;
-  z-index: 2;
-  left: -8px;
-  top: -48px;
+  position: absolute;
+  z-index: 1;
+  left: -1%;
+  top: 35%;
 }
 
 /* restaurants*/
@@ -418,16 +419,32 @@ footer .link .light-link {
   font-size: 1.75em;
   color: black;
 }
-.menu .title .heart-favicon-1 .fa-style {
+.menu .title .heart-favicon::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f004";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  font-size: x-large;
   color: #101010;
 }
-.menu .title .heart-favicon-1:active {
-  display: none;
-}
-.menu .title .heart-favicon-2 .fa-style {
-  color: blueviolet;
+.menu .title .heart-favicon:active::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f004";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  font-size: x-large;
+  font-weight: 800;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
+/* <i class="fa-xl fa-regular fa-heart fa-style" aria-hidden="true"></i>
+<i class="fa-xl fa-solid fa-heart fa-style" aria-hidden="true">*/
 .menu-cards {
   display: flex;
   flex-direction: column;
