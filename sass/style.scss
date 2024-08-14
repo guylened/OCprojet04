@@ -298,17 +298,18 @@ padding: 30px 18px 40px;
     h2 {
         @include Shrikhand (rem(28),black);
     }
-    
-    .heart-favicon {
-        @include heart-favicon-large;     
 
+    .heart-favicon {
+        @include heart-favicon-large;  
     }
 
+    input:checked + label {
+        @include heart-favicon-large-2; 
+    }
+    
+   
    
 }
-
-/* <i class="fa-xl fa-regular fa-heart fa-style" aria-hidden="true"></i>
-<i class="fa-xl fa-solid fa-heart fa-style" aria-hidden="true">*/
 
 
 .menu-cards {

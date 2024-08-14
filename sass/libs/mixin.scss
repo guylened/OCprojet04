@@ -64,7 +64,11 @@
     font-size: x-large;
     color: $border-heart;
     }
-    &:active::before {
+    
+}
+
+@mixin heart-favicon-large-2 {
+        &::before {
         font-family: "Font Awesome 6 Free";
         content: "\f004";
         display: inline-block;
@@ -75,6 +79,6 @@
         font-weight: 800;        
         background: -webkit-gradient(linear, left top, left bottom, from($primary-color), to($second-color));
         background-clip: text;
-        -webkit-text-fill-color: transparent; 
+        -webkit-text-fill-color: transparent;         
     }
 }
