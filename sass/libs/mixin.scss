@@ -26,6 +26,33 @@
     border-image-slice : 1;
 }
 
+
+@mixin heart-favicon-regular {
+    &::before {
+    font-family: "Font Awesome 6 Free";
+    content: "\f004";
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    font-size: medium;
+    color: $border-heart;
+    }
+    &:active::before {
+        font-family: "Font Awesome 6 Free";
+        content: "\f004";
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        font-size: medium;        
+        font-weight: 800;        
+        background: -webkit-gradient(linear, left top, left bottom, from($primary-color), to($second-color));
+        background-clip: text;
+        -webkit-text-fill-color: transparent; 
+    }
+}
+
 @mixin heart-favicon-large {
     &::before {
     font-family: "Font Awesome 6 Free";
