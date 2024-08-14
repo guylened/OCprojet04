@@ -19,3 +19,10 @@
     justify-content:$jy-ct;
     align-content:$al-ct;    
 }
+
+@mixin border-menu {
+    border-block-end: 3px solid;
+    border-image-source: linear-gradient(90deg, $third-color 50%, transparent 50%);
+    border-image-slice : 1;
+}
+
