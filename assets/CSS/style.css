@@ -92,33 +92,6 @@ badge: 2px
     opacity: 0.85;
   }
 }
-/*
-@keyframes heart {
-    from {
-    font-family: "Font Awesome 6 Free";
-    content: "\f004";
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    font-size: x-large;
-    color: $border-heart;           
-    }
-    to {
-        font-family: "Font Awesome 6 Free";
-        content: "\f004";
-        display: inline-block;
-        font-style: normal;
-        font-variant: normal;
-        text-rendering: auto;
-        font-size: x-large;        
-        font-weight: 800;        
-        background: -webkit-gradient(linear, left top, left bottom, from($primary-color), to($second-color));
-        background-clip: text;
-        -webkit-text-fill-color: transparent;                 
-    }
-}
-*/
 /* général */
 * {
   font-family: "Roboto", sans-serif;
@@ -292,6 +265,29 @@ header {
 }
 
 /* restaurants*/
+.loader {
+  border: 0.2em solid #99E2D0;
+  background-color: #f6f6f6;
+  width: 50px;
+  height: 50px;
+  align-self: center;
+  border-radius: 50%;
+  animation: loader 1100ms ease-out 5 backwards;
+}
+
+@keyframes loader {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
 .restaurants {
   background: #f6f6f6;
   padding: 45px 18px 65px;
@@ -380,7 +376,49 @@ header {
   -webkit-font-smoothing: antialiased;
   color: #101010;
 }
-.restaurants-cards .card .card-content .card-heart input:checked + label::before {
+.restaurants-cards .card .card-content .card-heart input#favoris1:checked + label::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f004";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  font-size: medium;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 800;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.restaurants-cards .card .card-content .card-heart input#favoris2:checked + label::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f004";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  font-size: medium;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 800;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.restaurants-cards .card .card-content .card-heart input#favoris3:checked + label::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f004";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  font-size: medium;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 800;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.restaurants-cards .card .card-content .card-heart input#favoris4:checked + label::before {
   font-family: "Font Awesome 6 Free";
   content: "\f004";
   display: inline-block;

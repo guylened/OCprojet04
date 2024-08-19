@@ -157,6 +157,32 @@ header {
 
 /* restaurants*/
 
+.loader{
+
+    border: .2em solid $third-color;
+    background-color: $lighter-grey;
+    width: 50px;
+    height: 50px;
+    align-self: center;
+	border-radius: 50%;
+	animation: loader 1100ms ease-out 5 backwards;    
+}
+
+@keyframes loader {
+	0% {
+		transform: scale(0);
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 0;
+	}
+}
+
+
 .restaurants {
     background: $lighter-grey;
     padding: 45px 18px 65px;
@@ -223,7 +249,19 @@ header {
             }
             
         
-            input:checked + label {
+            input#favoris1:checked + label {
+                @include heart-favicon-medium-2; 
+            }  
+
+            input#favoris2:checked + label {
+                @include heart-favicon-medium-2; 
+            }  
+
+            input#favoris3:checked + label {
+                @include heart-favicon-medium-2; 
+            }  
+
+            input#favoris4:checked + label {
                 @include heart-favicon-medium-2; 
             }  
         
@@ -389,12 +427,11 @@ padding: 30px 18px 40px;
           
     }
 
-    .btn{
+    .btn {
         display: block;
         align-self: center;
         margin-bottom: 0;
     }
-    
 }
 
 
