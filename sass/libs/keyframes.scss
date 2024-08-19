@@ -1,5 +1,27 @@
-@keyframes valid-meal {
+@keyframes btn-checked {
+   from {
+        width: 0;
+    }
     to {
+        width: 17%;       
+    }
+}
+
+@keyframes btn {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.02);
+        opacity: 0.85;
+    }
+}
+
+
+/*
+@keyframes heart {
+    from {
     font-family: "Font Awesome 6 Free";
     content: "\f004";
     display: inline-block;
@@ -9,7 +31,7 @@
     font-size: x-large;
     color: $border-heart;           
     }
-    from {
+    to {
         font-family: "Font Awesome 6 Free";
         content: "\f004";
         display: inline-block;
@@ -23,7 +45,4 @@
         -webkit-text-fill-color: transparent;                 
     }
 }
-
-/*  animation-name: heart-favicon-large;
-        animation-duration: 500ms;
-        animation-fill-mode: forwards;*/
+*/
