@@ -15,7 +15,6 @@
 
 body {
     @include Flexbox(column,center,center);   
-    max-width: 767px;
     width: 100%;
     background-color: $white-grey-black;    
 }
@@ -40,6 +39,53 @@ body {
 .title-homepage {
     @include Roboto(700,rem(24),black); 
     margin: 0 0 25px 0;
+}
+
+.loader-page {   
+    background-color: $lighter-grey;      
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0; 
+    @include Flexbox(row,center,center);
+    align-items: center;
+    z-index: 4;
+    animation: transparent 3700ms forwards;
+}
+
+
+.letter {
+    @include Shrikhand(em(48),$primary-color);   
+    letter-spacing: 7px;
+    animation : flash 1200ms linear 3 forwards;   
+
+}
+
+
+
+.letter:nth-child(1) {
+    animation-delay: 100ms;
+}
+.letter:nth-child(2) {
+    animation-delay: 225ms;    
+}
+.letter:nth-child(3) {
+    animation-delay: 350ms;
+}
+.letter:nth-child(4) {
+    animation-delay: 475ms;
+}
+.letter:nth-child(5) {
+    animation-delay: 600ms;
+}
+.letter:nth-child(6) {
+    animation-delay: 725ms;
+}
+.letter:nth-child(7) {
+    animation-delay: 850ms;
+}
+.letter:nth-child(8) {
+    animation-delay: 975ms;
 }
 
 
@@ -156,31 +202,6 @@ header {
 
 
 /* restaurants*/
-
-.loader{
-
-    border: .2em solid $third-color;
-    background-color: $lighter-grey;
-    width: 50px;
-    height: 50px;
-    align-self: center;
-	border-radius: 50%;
-	animation: loader 1100ms ease-out 5 backwards;    
-}
-
-@keyframes loader {
-	0% {
-		transform: scale(0);
-		opacity: 0;
-	}
-	50% {
-		opacity: 1;
-	}
-	100% {
-		transform: scale(1);
-		opacity: 0;
-	}
-}
 
 
 .restaurants {
@@ -315,7 +336,8 @@ padding: 30px 18px 40px;
 .banner {        
     width: 100%;
     height: 275px;
-    object-fit: cover;    
+    object-fit: cover;
+    
 }
 
 
@@ -366,7 +388,10 @@ padding: 30px 18px 40px;
         border-radius: 15px;
         background: $white-grey-black;
         box-shadow: $card-menu-shadow;
+        animation: pop 600ms 100ms ease-in-out forwards;
     }
+
+
    
     .card .card-content {
     @include Flexbox(row,space-between,center);     
