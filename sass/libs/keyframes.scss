@@ -21,7 +21,7 @@
 /*loader*/
 @keyframes invisible {
     0% { opacity: 1;}
-    95% { opacity: 0.99;}
+    95% { opacity: 0.95;}
     100% { display: none;}  
 }
 
@@ -47,16 +47,16 @@
 @keyframes pop {
 
     0% {         
-        transform: scale(0.9) ;
+        opacity: 0;
 
     }
 
-    70% {
-        transform: scale(1.02) ;
-    }
+   70% { opacity: 0.9;
+}
 
     100% {         
-        transform: scale(1) ;
+        
+        opacity: 1;
         }
 
 }

@@ -98,7 +98,7 @@ badge: 2px
     opacity: 1;
   }
   95% {
-    opacity: 0.99;
+    opacity: 0.95;
   }
   100% {
     display: none;
@@ -121,13 +121,13 @@ badge: 2px
 /*card menu*/
 @keyframes pop {
   0% {
-    transform: scale(0.9);
+    opacity: 0;
   }
   70% {
-    transform: scale(1.02);
+    opacity: 0.9;
   }
   100% {
-    transform: scale(1);
+    opacity: 1;
   }
 }
 /* général */
@@ -578,8 +578,8 @@ footer .link .light-link {
   background: #f6f6f6;
   padding: 35px 15px 0 15px;
   border-radius: 50px 50px 0 0;
-  position: absolute;
-  top: 275px;
+  position: relative;
+  top: -50px;
 }
 .menu .menu-title {
   font-family: "Roboto", sans-serif;
@@ -649,10 +649,8 @@ footer .link .light-link {
   border-radius: 15px;
   background: white;
   box-shadow: 0px 4px 15px 0px #e6e6e6;
-  animation: pop 1200ms ease-in-out forwards;
-}
-.menu-cards .card:nth-child(1) {
-  animation-delay: 100ms;
+  opacity: 0;
+  animation: pop 2000ms ease-in-out forwards;
 }
 .menu-cards .card:nth-child(2) {
   animation-delay: 100ms;
@@ -661,21 +659,24 @@ footer .link .light-link {
   animation-delay: 100ms;
 }
 .menu-cards .card:nth-child(4) {
-  animation-delay: 700ms;
-}
-.menu-cards .card:nth-child(5) {
-  animation-delay: 700ms;
+  animation-delay: 100ms;
 }
 .menu-cards .card:nth-child(6) {
   animation-delay: 700ms;
 }
 .menu-cards .card:nth-child(7) {
-  animation-delay: 1300ms;
+  animation-delay: 700ms;
 }
 .menu-cards .card:nth-child(8) {
+  animation-delay: 700ms;
+}
+.menu-cards .card:nth-child(10) {
   animation-delay: 1300ms;
 }
-.menu-cards .card:nth-child(9) {
+.menu-cards .card:nth-child(11) {
+  animation-delay: 1300ms;
+}
+.menu-cards .card:nth-child(12) {
   animation-delay: 1300ms;
 }
 .menu-cards .card .card-content {

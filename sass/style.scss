@@ -356,8 +356,8 @@ padding: 30px 18px 40px;
     background: $lighter-grey;
     padding: 35px 15px 0 15px;
     border-radius: 50px 50px 0 0 ;
-    position :absolute;
-    top:275px;    
+    position :relative;
+    top: -50px;    
     
     .menu-title {
         @include Roboto(300,rem(16),black);
@@ -399,34 +399,35 @@ padding: 30px 18px 40px;
         border-radius: 15px;
         background: $white-grey-black;
         box-shadow: $card-menu-shadow;
-        animation: pop 1200ms  ease-in-out forwards;
+        opacity: 0;
+        animation: pop 2000ms  ease-in-out forwards;
     }
 
-    .card:nth-child(1) {
-        animation-delay: 100ms;
-    }
     .card:nth-child(2) {
-        animation-delay: 100ms;    
+        animation-delay: 100ms;
     }
     .card:nth-child(3) {
-        animation-delay: 100ms;
+        animation-delay: 100ms;    
     }
     .card:nth-child(4) {
-        animation-delay: 700ms;
-    }
-    .card:nth-child(5) {
-        animation-delay: 700ms;
+        animation-delay: 100ms;
     }
     .card:nth-child(6) {
         animation-delay: 700ms;
     }
     .card:nth-child(7) {
-        animation-delay: 1300ms;
+        animation-delay: 700ms;
     }
     .card:nth-child(8) {
+        animation-delay: 700ms;
+    }
+    .card:nth-child(10) {
         animation-delay: 1300ms;
     }
-    .card:nth-child(9) {
+    .card:nth-child(11) {
+        animation-delay: 1300ms;
+    }
+    .card:nth-child(12) {
         animation-delay: 1300ms;
     }
 
