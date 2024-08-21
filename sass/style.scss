@@ -10,6 +10,7 @@
 
 * {
     font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
 }
 
 
@@ -50,7 +51,7 @@ body {
     @include Flexbox(row,center,center);
     align-items: center;
     z-index: 4;
-    animation: transparent 3700ms forwards;
+    animation: invisible 3700ms forwards;
 }
 
 
@@ -60,7 +61,6 @@ body {
     animation : flash 1200ms linear 3 forwards;   
 
 }
-
 
 
 .letter:nth-child(1) {
@@ -165,8 +165,8 @@ header {
 }
 
 .info-cards {
-    @include Flexbox(column,center,center);
-    gap:20px;
+    @include Flexbox(column,center,center);    
+    gap: 20px;
     
     .card {
         @include Flexbox(row,left,center);        
@@ -210,7 +210,8 @@ header {
 }
 
 .restaurants-cards {
-    @include Flexbox(column,center,center);
+    display: grid;
+    grid-column: 1fr;
     gap: 18px;
     
 
@@ -295,6 +296,10 @@ header {
 /* footer*/
 
 footer {
+    /*
+position: absolute;
+bottom: 0; right: 0; left: 0;*/
+
 @include Flexbox(column,center,flex-start); 
 gap: 18px;
 background: $dark-grey;
@@ -331,13 +336,19 @@ padding: 30px 18px 40px;
 
 .restaurants-main {
     background-color: $lighter-grey;
+    @include Flexbox(column,center,center);  
+    align-items: center;
 }
 
 .banner {        
-    width: 100%;
+    width: 100%;    
+    position: relative; 
+   
+    img {
+    width: 100%; 
     height: 275px;
-    object-fit: cover;
-    
+    object-fit: cover; 
+    }
 }
 
 
@@ -345,8 +356,8 @@ padding: 30px 18px 40px;
     background: $lighter-grey;
     padding: 35px 15px 0 15px;
     border-radius: 50px 50px 0 0 ;
-    position :relative;
-    top:-90px;
+    position :absolute;
+    top:275px;    
     
     .menu-title {
         @include Roboto(300,rem(16),black);
@@ -388,8 +399,37 @@ padding: 30px 18px 40px;
         border-radius: 15px;
         background: $white-grey-black;
         box-shadow: $card-menu-shadow;
-        animation: pop 600ms 100ms ease-in-out forwards;
+        animation: pop 1200ms  ease-in-out forwards;
     }
+
+    .card:nth-child(1) {
+        animation-delay: 100ms;
+    }
+    .card:nth-child(2) {
+        animation-delay: 100ms;    
+    }
+    .card:nth-child(3) {
+        animation-delay: 100ms;
+    }
+    .card:nth-child(4) {
+        animation-delay: 700ms;
+    }
+    .card:nth-child(5) {
+        animation-delay: 700ms;
+    }
+    .card:nth-child(6) {
+        animation-delay: 700ms;
+    }
+    .card:nth-child(7) {
+        animation-delay: 1300ms;
+    }
+    .card:nth-child(8) {
+        animation-delay: 1300ms;
+    }
+    .card:nth-child(9) {
+        animation-delay: 1300ms;
+    }
+
 
 
    
@@ -459,4 +499,37 @@ padding: 30px 18px 40px;
     }
 }
 
+
+@media only screen and (min-width:1024px)  {
+
+    .menu {
+       
+        width: 70%;
+    }
+
+    .info-cards {
+        @include Flexbox(row,center,center);
+        gap: 30px;
+    }
+    
+    
+    .restaurants-cards {
+        grid-template-columns: 1fr 1fr; 
+    }
+
+    footer {
+        @include Flexbox(row-reverse,flex-start,center);
+        align-items: center;
+        padding-right: 40px;
+        gap: 20px;
+
+        .link {
+            @include Flexbox(row,center,center);
+            gap: 10px;         
+        }        
+
+    }
+
+}   
+    
 

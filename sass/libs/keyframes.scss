@@ -19,10 +19,10 @@
 }
 
 /*loader*/
-@keyframes transparent {
+@keyframes invisible {
     0% { opacity: 1;}
-    99% { opacity: 0.99;}
-    100% { opacity: 0;}  
+    95% { opacity: 0.99;}
+    100% { display: none;}  
 }
 
 @keyframes flash {
