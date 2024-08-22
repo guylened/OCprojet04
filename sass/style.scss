@@ -443,7 +443,7 @@ padding: 30px 18px 40px;
     width: 100%;
     height: 76px;
     padding: 15px;
-    gap:5px;     
+    gap:5px;
     &:active {
         .checked-meal {        
         position: absolute;
@@ -471,6 +471,7 @@ padding: 30px 18px 40px;
             width: 100%;                    
             @include Flexbox(column,space-between,center); 
             gap:5px;  
+            overflow:hidden ;
 
             .card-title {
                 @include Roboto(500,rem(18),black);
@@ -482,15 +483,12 @@ padding: 30px 18px 40px;
             .card-subtitle {
                 @include Roboto(300,rem(15),black);
                  white-space: nowrap;
-                 text-overflow: ellipsis
-                /*
-                overflow: hidden;
-                text-overflow: ellipsis;*/
+                 text-overflow: ellipsis;                
             }
         }  
         .price {  
             @include Roboto(700,rem(15),black); 
-            display: inline-block;
+            @include Flexbox(row,center,center);
             align-self: flex-end;
                                            
             /*padding: 5px; 

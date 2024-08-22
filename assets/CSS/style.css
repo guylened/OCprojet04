@@ -749,6 +749,7 @@ footer .link .light-link {
   justify-content: space-between;
   align-content: center;
   gap: 5px;
+  overflow: hidden;
 }
 .menu-cards .card .card-content .card-txt .card-title {
   font-family: "Roboto", sans-serif;
@@ -771,7 +772,10 @@ footer .link .light-link {
   font-weight: 700;
   font-size: 0.9375rem;
   color: black;
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
   align-self: flex-end;
   /*padding: 5px; 
   position: absolute; 
