@@ -9,8 +9,7 @@
 /* général */
 
 * {
-    font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;    
 }
 
 
@@ -22,18 +21,17 @@ body {
     
 
 .btn {
-    height: 50px;
-    min-width: 207px;
+    height: 50px;    
     max-width: 220px;
     border-radius: 25px;
     margin:30px;
-    padding: 15px;
+    padding: 15px 20px;    
     background: $gradient-btn;
     border: none;
     box-shadow: $btn-shadow;
     @include Roboto(500,rem(16),white);    
     &:hover {
-        animation: btn 100ms forwards;
+        animation: btn 100ms ease-in-out forwards;
     }    
 }
 
@@ -45,21 +43,20 @@ body {
 .loader-page {   
     background-color: $lighter-grey;      
     width: 100%;
-    height: 100%;
+    height: 100%;    
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0; 
     @include Flexbox(row,center,center);
     align-items: center;
     z-index: 4;
-    animation: invisible 3700ms forwards;
+    animation: invisible 3700ms ease-out forwards;
 }
 
 
 .letter {
     @include Shrikhand(em(48),$primary-color);   
     letter-spacing: 7px;
-    animation : flash 1200ms linear 3 forwards;   
-
+    animation : flash 1200ms ease-out 3 forwards; 
 }
 
 
@@ -185,16 +182,14 @@ header {
     .bulle {
         @include Roboto(400,rem(12),white); 
         text-align: center;        
-        padding: 3px;    
-        height: 20px;
-        width: 20px;
+        padding: 3px 7px; 
         background-color: $primary-color;
         border-radius: 50%;
         border:none;
         position: absolute;
         z-index: 1;
-        left: -1%;
-        top: 35%;
+        left: -10px;
+        top: 25px;
     }
     
 }
@@ -228,8 +223,8 @@ header {
 
     .card .badge {
             position: absolute;
-            left: 80%;
-            top: 7%;
+            right: 20px;
+            top: 20px;
             z-index: 1;
             width: 80px;
             height: 30px;             
@@ -296,9 +291,7 @@ header {
 /* footer*/
 
 footer {
-    /*
-position: absolute;
-bottom: 0; right: 0; left: 0;*/
+
 
 @include Flexbox(column,center,flex-start); 
 gap: 18px;
@@ -326,14 +319,22 @@ padding: 30px 18px 40px;
 
 }
 
-/* Pages restaurants*/
+/* Pages restaurants/menus*/
 
-.restaurants-header {
+.restaurants-header {    
     @include Flexbox(row-reverse,center,center);
-    gap: 40px;
-    align-items: center;
+    align-items: center;           
+    nav { 
+        position: absolute;
+        left: 15px;
+    }
+        
 }
 
+/*position: absolute;
+        left: 50%;
+        right:50%;
+*/
 .restaurants-main {
     background-color: $lighter-grey;
     @include Flexbox(column,center,center);  
@@ -341,9 +342,7 @@ padding: 30px 18px 40px;
 }
 
 .banner {        
-    width: 100%;    
-    position: relative; 
-   
+    width: 100%;  
     img {
     width: 100%; 
     height: 275px;
@@ -353,11 +352,31 @@ padding: 30px 18px 40px;
 
 
 .menu {    
+    width: 100%;
     background: $lighter-grey;
-    padding: 35px 15px 0 15px;
+    padding: 35px 20px 15px 20px;
     border-radius: 50px 50px 0 0 ;
     position :relative;
-    top: -50px;    
+    top: -50px;  
+    
+    .title {
+        @include Flexbox(row,space-between,center);
+        margin-right:10px;
+        padding-bottom: 40px;
+    
+        h2 {
+            @include Shrikhand (rem(28),black);
+        }
+    
+        .heart-favicon {
+            @include heart-favicon-large;  
+        }
+    
+        input:checked + label {
+            @include heart-favicon-large-2; 
+        }   
+
+    }
     
     .menu-title {
         @include Roboto(300,rem(16),black);
@@ -366,26 +385,10 @@ padding: 30px 18px 40px;
         width: 80px;
         @include border-menu;        
     }
-        
+
 }
 
-.menu .title {
-    @include Flexbox(row,space-between,center);
-    margin-right:20px;
-    padding-bottom: 40px;
 
-    h2 {
-        @include Shrikhand (rem(28),black);
-    }
-
-    .heart-favicon {
-        @include heart-favicon-large;  
-    }
-
-    input:checked + label {
-        @include heart-favicon-large-2; 
-    }   
-}
 
 
 .menu-cards {
@@ -438,12 +441,11 @@ padding: 30px 18px 40px;
     @include Flexbox(row,space-between,center);     
     position: relative;   
     width: 100%;
-    height: 72px;
+    height: 76px;
     padding: 15px;
-    gap:5px; 
+    gap:5px;     
     &:active {
-        .checked-meal {
-        visibility: visible;  
+        .checked-meal {        
         position: absolute;
         right:0;
         top: 0;        
@@ -454,41 +456,50 @@ padding: 30px 18px 40px;
         font-size: x-large;        
         color: $white-grey-black;        
         border-radius: 0 15px 15px 0;
-        animation: btn-checked 300ms forwards;           
+        animation: btn-checked 300ms ease-in-out forwards;           
         }
-        .price {  
+       /* .price {  
             animation: transform 300ms;           
             transform: translateX(-100%);
             position: absolute;
             bottom: 9px;
             left: 82%;
-        }
+        }*/
         }             
 
         .card-txt {
-            width: 75%;                    
+            width: 100%;                    
             @include Flexbox(column,space-between,center); 
-            gap:5px;    
+            gap:5px;  
 
             .card-title {
                 @include Roboto(500,rem(18),black);
+                white-space: nowrap;
+                text-overflow: ellipsis
+
             }
 
             .card-subtitle {
                 @include Roboto(300,rem(15),black);
+                 white-space: nowrap;
+                 text-overflow: ellipsis
+                /*
                 overflow: hidden;
-                text-overflow: ellipsis;
+                text-overflow: ellipsis;*/
             }
         }  
         .price {  
-            @include Roboto(700,rem(15),black);                     
-            padding: 5px; 
+            @include Roboto(700,rem(15),black); 
+            display: inline-block;
+            align-self: flex-end;
+                                           
+            /*padding: 5px; 
             position: absolute; 
             bottom: 9px;
-            left: 88%; 
+            left: 88%;*/ 
         }
         .checked-meal {
-            visibility: hidden; 
+            display:none; 
         } 
           
     }
@@ -501,8 +512,9 @@ padding: 30px 18px 40px;
 }
 
 
-@media only screen and (min-width:1024px)  {
+@media only screen and (min-width:767.9px)  {
 
+    
     .menu {
        
         width: 70%;

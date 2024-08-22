@@ -58,7 +58,29 @@
         
         opacity: 1;
         }
+}
 
+/*coeur*/
+
+@keyframes fill-heart { 
+             
+    0% { 
+         
+        background: $gradient-heart;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;          
+        height: 0;        
+        
+    }   
+    
+
+    100% { 
+       background: $gradient-heart;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity: 1;   
+        height: 100%;               
+    }       
 }
 
 

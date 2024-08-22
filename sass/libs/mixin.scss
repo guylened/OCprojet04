@@ -27,31 +27,6 @@
 }
 
 
-@mixin heart-favicon-regular {
-    &::before {
-    font-family: "Font Awesome 6 Free";
-    content: "\f004";
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    font-size: medium;
-    color: $border-heart;
-    }
-    &:active::before {
-        font-family: "Font Awesome 6 Free";
-        content: "\f004";
-        display: inline-block;
-        font-style: normal;
-        font-variant: normal;
-        text-rendering: auto;
-        font-size: medium;        
-        font-weight: 800;        
-        background: -webkit-gradient(linear, left top, left bottom, from($primary-color), to($second-color));
-        background-clip: text;
-        -webkit-text-fill-color: transparent; 
-    }
-}
 
 @mixin heart-favicon-large {
     &::before {
@@ -62,6 +37,7 @@
     font-variant: normal;
     text-rendering: auto;
     font-size: x-large;
+    -webkit-font-smoothing: antialiased;
     color: $border-heart;
     }
     
@@ -75,11 +51,14 @@
         font-style: normal;
         font-variant: normal;
         text-rendering: auto;
-        font-size: x-large;        
+        font-size: x-large;
+        -webkit-font-smoothing: antialiased;        
         font-weight: 800;        
         background: -webkit-gradient(linear, left top, left bottom, from($primary-color), to($second-color));
         background-clip: text;
-        -webkit-text-fill-color: transparent;         
+        -webkit-text-fill-color: transparent; 
+        opacity: 0;
+        animation: fill-heart 600ms ease-in-out forwards;        
     }
 }
 
@@ -92,9 +71,9 @@
     font-style: normal;
     font-variant: normal;
     text-rendering: auto;
-    font-size: medium;
+    font-size: large;
     -webkit-font-smoothing: antialiased;
-    color: $border-heart;
+    color: $border-heart;    
     }
     
 }
@@ -107,11 +86,13 @@
         font-style: normal;
         font-variant: normal;
         text-rendering: auto;
-        font-size: medium;
+        font-size: large;
         -webkit-font-smoothing: antialiased;        
-        font-weight: 800;        
-        background: -webkit-gradient(linear, left top, left bottom, from($primary-color), to($second-color));
+        font-weight: 800; 
+        background: $gradient-heart;
         background-clip: text;
-        -webkit-text-fill-color: transparent;         
+        -webkit-text-fill-color: transparent; 
+        opacity: 0;
+        animation: fill-heart 600ms ease-in-out forwards;
     }
 }

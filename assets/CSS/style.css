@@ -22,7 +22,7 @@ html {
 }
 
 *, *::before, *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 img, video {
@@ -130,10 +130,25 @@ badge: 2px
     opacity: 1;
   }
 }
+/*coeur*/
+@keyframes fill-heart {
+  0% {
+    background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    height: 0;
+  }
+  100% {
+    background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 1;
+    height: 100%;
+  }
+}
 /* général */
 * {
   font-family: "Roboto", sans-serif;
-  box-sizing: border-box;
 }
 
 body {
@@ -147,11 +162,10 @@ body {
 
 .btn {
   height: 50px;
-  min-width: 207px;
   max-width: 220px;
   border-radius: 25px;
   margin: 30px;
-  padding: 15px;
+  padding: 15px 20px;
   background: linear-gradient(170deg, #FF79DA, #9356DC 90%);
   border: none;
   box-shadow: 0px 4px 10px 0px #bfbfbf;
@@ -161,7 +175,7 @@ body {
   color: white;
 }
 .btn:hover {
-  animation: btn 100ms forwards;
+  animation: btn 100ms ease-in-out forwards;
 }
 
 .title-homepage {
@@ -187,7 +201,7 @@ body {
   align-content: center;
   align-items: center;
   z-index: 4;
-  animation: invisible 3700ms forwards;
+  animation: invisible 3700ms ease-out forwards;
 }
 
 .letter {
@@ -196,7 +210,7 @@ body {
   font-size: 3em;
   color: #9356DC;
   letter-spacing: 7px;
-  animation: flash 1200ms linear 3 forwards;
+  animation: flash 1200ms ease-out 3 forwards;
 }
 
 .letter:nth-child(1) {
@@ -349,16 +363,14 @@ header {
   font-size: 0.75rem;
   color: white;
   text-align: center;
-  padding: 3px;
-  height: 20px;
-  width: 20px;
+  padding: 3px 7px;
   background-color: #9356DC;
   border-radius: 50%;
   border: none;
   position: absolute;
   z-index: 1;
-  left: -1%;
-  top: 35%;
+  left: -10px;
+  top: 25px;
 }
 
 /* restaurants*/
@@ -390,8 +402,8 @@ header {
 }
 .restaurants-cards .card .badge {
   position: absolute;
-  left: 80%;
-  top: 7%;
+  right: 20px;
+  top: 20px;
   z-index: 1;
   width: 80px;
   height: 30px;
@@ -444,7 +456,7 @@ header {
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
-  font-size: medium;
+  font-size: large;
   -webkit-font-smoothing: antialiased;
   color: #101010;
 }
@@ -455,12 +467,14 @@ header {
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
-  font-size: medium;
+  font-size: large;
   -webkit-font-smoothing: antialiased;
   font-weight: 800;
   background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  opacity: 0;
+  animation: fill-heart 600ms ease-in-out forwards;
 }
 .restaurants-cards .card .card-content .card-heart input#favoris2:checked + label::before {
   font-family: "Font Awesome 6 Free";
@@ -469,12 +483,14 @@ header {
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
-  font-size: medium;
+  font-size: large;
   -webkit-font-smoothing: antialiased;
   font-weight: 800;
   background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  opacity: 0;
+  animation: fill-heart 600ms ease-in-out forwards;
 }
 .restaurants-cards .card .card-content .card-heart input#favoris3:checked + label::before {
   font-family: "Font Awesome 6 Free";
@@ -483,12 +499,14 @@ header {
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
-  font-size: medium;
+  font-size: large;
   -webkit-font-smoothing: antialiased;
   font-weight: 800;
   background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  opacity: 0;
+  animation: fill-heart 600ms ease-in-out forwards;
 }
 .restaurants-cards .card .card-content .card-heart input#favoris4:checked + label::before {
   font-family: "Font Awesome 6 Free";
@@ -497,19 +515,18 @@ header {
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
-  font-size: medium;
+  font-size: large;
   -webkit-font-smoothing: antialiased;
   font-weight: 800;
   background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  opacity: 0;
+  animation: fill-heart 600ms ease-in-out forwards;
 }
 
 /* footer*/
 footer {
-  /*
-  position: absolute;
-  bottom: 0; right: 0; left: 0;*/
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -545,16 +562,23 @@ footer .link .light-link {
   color: white;
 }
 
-/* Pages restaurants*/
+/* Pages restaurants/menus*/
 .restaurants-header {
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
   align-content: center;
-  gap: 40px;
   align-items: center;
 }
+.restaurants-header nav {
+  position: absolute;
+  left: 15px;
+}
 
+/*position: absolute;
+        left: 50%;
+        right:50%;
+*/
 .restaurants-main {
   background-color: #f6f6f6;
   display: flex;
@@ -566,7 +590,6 @@ footer .link .light-link {
 
 .banner {
   width: 100%;
-  position: relative;
 }
 .banner img {
   width: 100%;
@@ -575,31 +598,19 @@ footer .link .light-link {
 }
 
 .menu {
+  width: 100%;
   background: #f6f6f6;
-  padding: 35px 15px 0 15px;
+  padding: 35px 20px 15px 20px;
   border-radius: 50px 50px 0 0;
   position: relative;
   top: -50px;
 }
-.menu .menu-title {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  font-size: 1rem;
-  color: black;
-  text-transform: uppercase;
-  padding-bottom: 10px;
-  width: 80px;
-  border-block-end: 3px solid;
-  border-image-source: linear-gradient(90deg, #99E2D0 50%, transparent 50%);
-  border-image-slice: 1;
-}
-
 .menu .title {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-content: center;
-  margin-right: 20px;
+  margin-right: 10px;
   padding-bottom: 40px;
 }
 .menu .title h2 {
@@ -616,6 +627,7 @@ footer .link .light-link {
   font-variant: normal;
   text-rendering: auto;
   font-size: x-large;
+  -webkit-font-smoothing: antialiased;
   color: #101010;
 }
 .menu .title input:checked + label::before {
@@ -626,10 +638,25 @@ footer .link .light-link {
   font-variant: normal;
   text-rendering: auto;
   font-size: x-large;
+  -webkit-font-smoothing: antialiased;
   font-weight: 800;
   background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  opacity: 0;
+  animation: fill-heart 600ms ease-in-out forwards;
+}
+.menu .menu-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  color: black;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  width: 80px;
+  border-block-end: 3px solid;
+  border-image-source: linear-gradient(90deg, #99E2D0 50%, transparent 50%);
+  border-image-slice: 1;
 }
 
 .menu-cards {
@@ -686,12 +713,20 @@ footer .link .light-link {
   align-content: center;
   position: relative;
   width: 100%;
-  height: 72px;
+  height: 76px;
   padding: 15px;
   gap: 5px;
 }
+.menu-cards .card .card-content:active {
+  /* .price {  
+       animation: transform 300ms;           
+       transform: translateX(-100%);
+       position: absolute;
+       bottom: 9px;
+       left: 82%;
+   }*/
+}
 .menu-cards .card .card-content:active .checked-meal {
-  visibility: visible;
   position: absolute;
   right: 0;
   top: 0;
@@ -705,17 +740,10 @@ footer .link .light-link {
   font-size: x-large;
   color: white;
   border-radius: 0 15px 15px 0;
-  animation: btn-checked 300ms forwards;
-}
-.menu-cards .card .card-content:active .price {
-  animation: transform 300ms;
-  transform: translateX(-100%);
-  position: absolute;
-  bottom: 9px;
-  left: 82%;
+  animation: btn-checked 300ms ease-in-out forwards;
 }
 .menu-cards .card .card-content .card-txt {
-  width: 75%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -727,13 +755,15 @@ footer .link .light-link {
   font-weight: 500;
   font-size: 1.125rem;
   color: black;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .menu-cards .card .card-content .card-txt .card-subtitle {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-size: 0.9375rem;
   color: black;
-  overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 .menu-cards .card .card-content .price {
@@ -741,13 +771,15 @@ footer .link .light-link {
   font-weight: 700;
   font-size: 0.9375rem;
   color: black;
-  padding: 5px;
-  position: absolute;
+  display: inline-block;
+  align-self: flex-end;
+  /*padding: 5px; 
+  position: absolute; 
   bottom: 9px;
-  left: 88%;
+  left: 88%;*/
 }
 .menu-cards .card .card-content .checked-meal {
-  visibility: hidden;
+  display: none;
 }
 .menu-cards .btn {
   display: block;
@@ -755,7 +787,7 @@ footer .link .light-link {
   margin-bottom: 0;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 767.9px) {
   .menu {
     width: 70%;
   }
