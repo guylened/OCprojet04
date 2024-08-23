@@ -600,7 +600,7 @@ footer .link .light-link {
 .menu {
   width: 100%;
   background: #f6f6f6;
-  padding: 35px 20px 15px 20px;
+  padding: 35px 20px 0 20px;
   border-radius: 50px 50px 0 0;
   position: relative;
   top: -50px;
@@ -659,14 +659,15 @@ footer .link .light-link {
   border-image-slice: 1;
 }
 
-.menu-cards {
+.menu-cards-1, .menu-cards-2, .menu-cards-3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
   gap: 18px;
+  margin-bottom: 18px;
 }
-.menu-cards .card {
+.menu-cards-1 .card, .menu-cards-2 .card, .menu-cards-3 .card {
   display: flex;
   flex-direction: column;
   justify-content: left;
@@ -679,34 +680,7 @@ footer .link .light-link {
   opacity: 0;
   animation: pop 2000ms ease-in-out forwards;
 }
-.menu-cards .card:nth-child(2) {
-  animation-delay: 100ms;
-}
-.menu-cards .card:nth-child(3) {
-  animation-delay: 100ms;
-}
-.menu-cards .card:nth-child(4) {
-  animation-delay: 100ms;
-}
-.menu-cards .card:nth-child(6) {
-  animation-delay: 700ms;
-}
-.menu-cards .card:nth-child(7) {
-  animation-delay: 700ms;
-}
-.menu-cards .card:nth-child(8) {
-  animation-delay: 700ms;
-}
-.menu-cards .card:nth-child(10) {
-  animation-delay: 1300ms;
-}
-.menu-cards .card:nth-child(11) {
-  animation-delay: 1300ms;
-}
-.menu-cards .card:nth-child(12) {
-  animation-delay: 1300ms;
-}
-.menu-cards .card .card-content {
+.menu-cards-1 .card .card-content, .menu-cards-2 .card .card-content, .menu-cards-3 .card .card-content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -717,16 +691,7 @@ footer .link .light-link {
   padding: 15px;
   gap: 5px;
 }
-.menu-cards .card .card-content:active {
-  /* .price {  
-       animation: transform 300ms;           
-       transform: translateX(-100%);
-       position: absolute;
-       bottom: 9px;
-       left: 82%;
-   }*/
-}
-.menu-cards .card .card-content:active .checked-meal {
+.menu-cards-1 .card .card-content:active .checked-meal, .menu-cards-2 .card .card-content:active .checked-meal, .menu-cards-3 .card .card-content:active .checked-meal {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -738,7 +703,7 @@ footer .link .light-link {
   border-radius: 0 15px 15px 0;
   animation: btn-checked 300ms ease-in-out forwards;
 }
-.menu-cards .card .card-content .card-txt {
+.menu-cards-1 .card .card-content .card-txt, .menu-cards-2 .card .card-content .card-txt, .menu-cards-3 .card .card-content .card-txt {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -747,7 +712,7 @@ footer .link .light-link {
   gap: 5px;
   overflow: hidden;
 }
-.menu-cards .card .card-content .card-txt .card-title {
+.menu-cards-1 .card .card-content .card-txt .card-title, .menu-cards-2 .card .card-content .card-txt .card-title, .menu-cards-3 .card .card-content .card-txt .card-title {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 1.125rem;
@@ -755,7 +720,7 @@ footer .link .light-link {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.menu-cards .card .card-content .card-txt .card-subtitle {
+.menu-cards-1 .card .card-content .card-txt .card-subtitle, .menu-cards-2 .card .card-content .card-txt .card-subtitle, .menu-cards-3 .card .card-content .card-txt .card-subtitle {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-size: 0.9375rem;
@@ -763,7 +728,7 @@ footer .link .light-link {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.menu-cards .card .card-content .price {
+.menu-cards-1 .card .card-content .price, .menu-cards-2 .card .card-content .price, .menu-cards-3 .card .card-content .price {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 0.9375rem;
@@ -773,22 +738,30 @@ footer .link .light-link {
   justify-content: center;
   align-content: center;
   align-self: flex-end;
-  /*padding: 5px; 
-  position: absolute; 
-  bottom: 9px;
-  left: 88%;*/
 }
-.menu-cards .card .card-content .checked-meal {
+.menu-cards-1 .card .card-content .checked-meal, .menu-cards-2 .card .card-content .checked-meal, .menu-cards-3 .card .card-content .checked-meal {
   display: none;
   margin-top: -15px;
   margin-right: -15px;
   margin-left: 3px;
   height: 76px;
 }
-.menu-cards .btn {
+.menu-cards-1 .btn, .menu-cards-2 .btn, .menu-cards-3 .btn {
   display: block;
   align-self: center;
   margin-bottom: 0;
+}
+
+.menu-cards-1 .card:nth-of-type(-n+4) {
+  animation-delay: 100ms;
+}
+
+.menu-cards-2 .card:nth-of-type(-n+3) {
+  animation-delay: 700ms;
+}
+
+.menu-cards-3 .card:nth-of-type(-n+3) {
+  animation-delay: 1300ms;
 }
 
 @media only screen and (min-width: 767.9px) {
