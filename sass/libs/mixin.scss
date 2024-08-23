@@ -28,7 +28,7 @@
 
 
 
-@mixin heart-favicon-large {
+@mixin heart-favicon-xlarge {
     &::before {
     font-family: "Font Awesome 6 Free";
     content: "\f004";
@@ -36,14 +36,14 @@
     font-style: normal;
     font-variant: normal;
     text-rendering: auto;
-    font-size: x-large;
+    font-size: xx-large;
     -webkit-font-smoothing: antialiased;
     color: $border-heart;
     }
     
 }
 
-@mixin heart-favicon-large-2 {
+@mixin heart-favicon-xlarge-2 {
         &::before {
         font-family: "Font Awesome 6 Free";
         content: "\f004";
@@ -51,10 +51,10 @@
         font-style: normal;
         font-variant: normal;
         text-rendering: auto;
-        font-size: x-large;
+        font-size: xx-large;
         -webkit-font-smoothing: antialiased;        
         font-weight: 800;        
-        background: -webkit-gradient(linear, left top, left bottom, from($primary-color), to($second-color));
+        background: $gradient-heart;
         background-clip: text;
         -webkit-text-fill-color: transparent; 
         opacity: 0;
@@ -63,7 +63,7 @@
 }
 
 
-@mixin heart-favicon-medium {
+@mixin heart-favicon-large {
    &::before {
     font-family: "Font Awesome 6 Free";
     content: "\f004";
@@ -71,14 +71,14 @@
     font-style: normal;
     font-variant: normal;
     text-rendering: auto;
-    font-size: large;
+    font-size: x-large;
     -webkit-font-smoothing: antialiased;
     color: $border-heart;    
     }
     
 }
 
-@mixin heart-favicon-medium-2 {
+@mixin heart-favicon-large-2 {
     &::before {
         font-family: "Font Awesome 6 Free";
         content: "\f004";
@@ -86,7 +86,7 @@
         font-style: normal;
         font-variant: normal;
         text-rendering: auto;
-        font-size: large;
+        font-size: x-large;
         -webkit-font-smoothing: antialiased;        
         font-weight: 800; 
         background: $gradient-heart;

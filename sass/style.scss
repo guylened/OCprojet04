@@ -40,7 +40,7 @@ body {
     margin: 0 0 25px 0;
 }
 
-.loader-page {   
+.loader-page {  
     background-color: $lighter-grey;      
     width: 100%;
     height: 100%;    
@@ -49,7 +49,7 @@ body {
     @include Flexbox(row,center,center);
     align-items: center;
     z-index: 4;
-    animation: invisible 3700ms ease-out forwards;
+    animation: invisible 3700ms 50ms ease-out forwards;
 }
 
 
@@ -262,24 +262,24 @@ header {
         }   
         .card-heart {
             .heart-favicon {
-                @include heart-favicon-medium;  
+                @include heart-favicon-large;  
             }
             
         
             input#favoris1:checked + label {
-                @include heart-favicon-medium-2; 
+                @include heart-favicon-large-2; 
             }  
 
             input#favoris2:checked + label {
-                @include heart-favicon-medium-2; 
+                @include heart-favicon-large-2; 
             }  
 
             input#favoris3:checked + label {
-                @include heart-favicon-medium-2; 
+                @include heart-favicon-large-2; 
             }  
 
             input#favoris4:checked + label {
-                @include heart-favicon-medium-2; 
+                @include heart-favicon-large-2; 
             }  
         
         }  
@@ -369,11 +369,11 @@ padding: 30px 18px 40px;
         }
     
         .heart-favicon {
-            @include heart-favicon-large;  
+            @include heart-favicon-xlarge;  
         }
     
         input:checked + label {
-            @include heart-favicon-large-2; 
+            @include heart-favicon-xlarge-2; 
         }   
 
     }
@@ -445,11 +445,7 @@ padding: 30px 18px 40px;
     padding: 15px;
     gap:5px;
     &:active {
-        .checked-meal {        
-        position: absolute;
-        right:0;
-        top: 0;        
-        height: 100%;
+        .checked-meal { 
         @include Flexbox(row,center,center); 
         align-items: center;
         background: $third-color;        
@@ -498,6 +494,11 @@ padding: 30px 18px 40px;
         }
         .checked-meal {
             display:none; 
+            margin-top: -15px;
+            margin-right: -15px;
+            margin-left: 3px;
+            height: 76px;
+            
         } 
           
     }
