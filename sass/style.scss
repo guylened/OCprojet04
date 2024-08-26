@@ -206,7 +206,7 @@ header {
 
 .restaurants-cards {
     display: grid;
-    grid-column: 1fr;
+    grid-template-columns: 1fr;
     gap: 18px;
     
 
