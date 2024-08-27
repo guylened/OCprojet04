@@ -43,9 +43,9 @@
         <section class="info">
             <h2 class="title-homepage">Fonctionnement</h2>
             <div class="info-cards">
-                <h3 class="card"><i class="fa-solid fa-mobile-screen-button fa-style-grey" aria-hidden="true"></i>Choisissez un restaurant<span class="bulle">1</span></h3>                
-                <h3 class="card"><i class="fa-solid fa-list-ul fa-style-grey" aria-hidden="true"></i>Composez votre menu<span class="bulle">2</span></h3>                
-                <h3 class="card"><i class="fa-solid fa-store fa-style-violet" aria-hidden="true"></i>Dégustez au restaurant<span class="bulle">3</span></h3>                
+                <div class="card"><i class="fa-solid fa-lg fa-mobile-screen-button fa-style-grey" aria-hidden="true"></i><h3>Choisissez un restaurant</h3><span class="bulle">1</span></div>                
+                <div class="card"><i class="fa-solid fa-lg fa-list-ul fa-style-grey" aria-hidden="true"></i><h3>Composez votre menu</h3><span class="bulle">2</span></div>                
+                <div class="card"><i class="fa-solid fa-lg fa-store fa-style-violet" aria-hidden="true"></i><h3>Dégustez au restaurant</h3><span class="bulle">3</span></div>                
             </div>            
         </section>
         <section class="restaurants">            
@@ -62,12 +62,8 @@
                                 <h3 class="card-title">La palette du goût</h3>
                                 <p class="card-subtitle">Ménilmontant</p>
                             </div>
-                            <div class="card-heart">
-                                <input  type="checkbox"  name="favicon" id="favoris1">
-                                <label class="heart-favicon" for="favoris1">
-                                 <span class="sr-only">Favoris</span>
-                                 </label>                
-                                </input>
+                            <div class="heart-favicon" id="favoris1">                                
+                                 <span class="sr-only">Favoris</span>                                 
                             </div>
                         </div>
                     </article>
@@ -83,13 +79,9 @@
                                 <h3 class="card-title">La note enchantée</h3>
                                 <p class="card-subtitle">Charonne</p>
                             </div>
-                            <div class="card-heart">
-                                <input type="checkbox"  name="favicon" id="favoris2">
-                                <label class="heart-favicon" for="favoris2">
-                                 <span class="sr-only">Favoris</span>
-                                 </label>                
-                                </input>
-                            </div>
+                            <div class="heart-favicon" id="favoris2">                                
+                                <span class="sr-only">Favoris</span>                                 
+                           </div>
                         </div>
                     </article>
                 </a>
@@ -101,13 +93,9 @@
                                 <h3 class="card-title">A la française</h3>
                                 <p class="card-subtitle">Cité Rouge</p>
                             </div>
-                            <div class="card-heart">
-                                <input  type="checkbox"  name="favicon" id="favoris3">
-                                <label class="heart-favicon" for="favoris3">
-                                 <span class="sr-only">Favoris</span>
-                                 </label>                
-                                </input>
-                            </div>
+                            <div class="heart-favicon" id="favoris3">                                
+                                <span class="sr-only">Favoris</span>                                 
+                           </div>
                         </div>
                     </article>
                 </a>
@@ -119,13 +107,9 @@
                                 <h3 class="card-title">Le délice des sens</h3>
                                 <p class="card-subtitle">Folie-Méricourt</p>
                             </div>
-                            <div class="card-heart">
-                                <input  type="checkbox"  name="favicon" id="favoris4">
-                                <label class="heart-favicon" for="favoris4">
-                                 <span class="sr-only">Favoris</span>
-                                 </label>                
-                                </input>
-                            </div>
+                            <div class="heart-favicon" id="favoris4">                                
+                                <span class="sr-only">Favoris</span>                                 
+                           </div>
                         </div>
                     </article>
                 </a>               
@@ -135,10 +119,12 @@
     <footer>
          <h2>ohmyfood</h2>            
             <div class="link">
-            <a href="#"><i class="fa-solid fa-utensils fa-style" aria-hidden="true"></i>Proposer un restaurant</a>
-            <a href="#"><i class="fa-xs fa-solid fa-handshake-angle fa-style" aria-hidden="true"></i>Devenir partenaire</a>
-            <a href="#" class="light-link">Mentions légales</a>
-            <a href="mailto" class="light-link">Contact</a>
+            <a href="#"><i class="fa-solid fa-utensils fa-style" aria-hidden="true"></i><h3>Proposer un restaurant</h3></a>
+            <a href="#"><i class="fa-xs fa-solid fa-handshake-angle fa-style" aria-hidden="true"></i><h3>Devenir partenaire</h3></a>
+            <div class="slim-link">
+            <a href="#">Mentions légales</a>
+            <a href="mailto">Contact</a>
+            </div>
             </div>             
     </footer>
 </body>

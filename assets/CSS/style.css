@@ -147,10 +147,6 @@ badge: 2px
   }
 }
 /* général */
-* {
-  font-family: "Roboto", sans-serif;
-}
-
 body {
   display: flex;
   flex-direction: column;
@@ -169,6 +165,7 @@ body {
   background: linear-gradient(170deg, #FF79DA, #9356DC 90%);
   border: none;
   box-shadow: 0px 4px 10px 0px #bfbfbf;
+  cursor: pointer;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 1rem;
@@ -344,26 +341,29 @@ header {
   justify-content: left;
   align-content: center;
   align-items: center;
+  margin-left: 10px;
   gap: 20px;
   height: 72px;
   width: 100%;
   background: #f6f6f6;
   border-radius: 20px;
   box-shadow: 0px 4px 15px 0px #d9d9d9;
+  position: relative;
+  z-index: 0;
+}
+.info-cards .card h3 {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 1rem;
   color: black;
-  position: relative;
-  z-index: 0;
 }
 .info-cards .bulle {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   color: white;
   text-align: center;
-  padding: 3px 7px;
+  padding: 3px 8px;
   background-color: #9356DC;
   border-radius: 50%;
   border: none;
@@ -402,8 +402,8 @@ header {
 }
 .restaurants-cards .card .badge {
   position: absolute;
-  right: 20px;
-  top: 20px;
+  right: 15px;
+  top: 15px;
   z-index: 1;
   width: 80px;
   height: 30px;
@@ -449,7 +449,7 @@ header {
   font-size: 1.0625rem;
   color: #353535;
 }
-.restaurants-cards .card .card-content .card-heart .heart-favicon::before {
+.restaurants-cards .card .card-content .heart-favicon::before {
   font-family: "Font Awesome 6 Free";
   content: "\f004";
   display: inline-block;
@@ -459,8 +459,9 @@ header {
   font-size: x-large;
   -webkit-font-smoothing: antialiased;
   color: #101010;
+  cursor: pointer;
 }
-.restaurants-cards .card .card-content .card-heart input#favoris1:checked + label::before {
+.restaurants-cards .card .card-content #favoris1:hover::before {
   font-family: "Font Awesome 6 Free";
   content: "\f004";
   display: inline-block;
@@ -474,9 +475,10 @@ header {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0;
+  cursor: pointer;
   animation: fill-heart 600ms ease-in-out forwards;
 }
-.restaurants-cards .card .card-content .card-heart input#favoris2:checked + label::before {
+.restaurants-cards .card .card-content #favoris2:hover::before {
   font-family: "Font Awesome 6 Free";
   content: "\f004";
   display: inline-block;
@@ -490,9 +492,10 @@ header {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0;
+  cursor: pointer;
   animation: fill-heart 600ms ease-in-out forwards;
 }
-.restaurants-cards .card .card-content .card-heart input#favoris3:checked + label::before {
+.restaurants-cards .card .card-content #favoris3:hover::before {
   font-family: "Font Awesome 6 Free";
   content: "\f004";
   display: inline-block;
@@ -506,9 +509,10 @@ header {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0;
+  cursor: pointer;
   animation: fill-heart 600ms ease-in-out forwards;
 }
-.restaurants-cards .card .card-content .card-heart input#favoris4:checked + label::before {
+.restaurants-cards .card .card-content #favoris4:hover::before {
   font-family: "Font Awesome 6 Free";
   content: "\f004";
   display: inline-block;
@@ -522,6 +526,7 @@ header {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0;
+  cursor: pointer;
   animation: fill-heart 600ms ease-in-out forwards;
 }
 
@@ -531,12 +536,9 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-content: flex-start;
-  gap: 18px;
+  gap: 16px;
   background: #353535;
-  padding: 30px 18px 40px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 1rem;
+  padding: 22px 25px;
   color: white;
 }
 footer h2 {
@@ -550,12 +552,30 @@ footer .link {
   flex-direction: column;
   justify-content: center;
   align-content: flex-start;
-  gap: 8px;
+  gap: 10px;
+}
+footer .link a {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+}
+footer .link h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: white;
 }
 footer .link .fa-style {
   margin-right: 10px;
 }
-footer .link .light-link {
+footer .slim-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: flex-start;
+  gap: 10px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 1rem;
@@ -572,13 +592,9 @@ footer .link .light-link {
 }
 .restaurants-header nav {
   position: absolute;
-  left: 15px;
+  left: 17px;
 }
 
-/*position: absolute;
-        left: 50%;
-        right:50%;
-*/
 .restaurants-main {
   background-color: #f6f6f6;
   display: flex;
@@ -598,12 +614,21 @@ footer .link .light-link {
 }
 
 .menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
   width: 100%;
   background: #f6f6f6;
-  padding: 35px 20px 0 20px;
-  border-radius: 50px 50px 0 0;
+  padding: 35px 15px 0 15px;
+  border-radius: 40px 40px 0 0;
   position: relative;
-  top: -50px;
+  top: -40px;
+  gap: 40px;
+}
+.menu .btn {
+  align-self: center;
+  margin: 0;
 }
 .menu .title {
   display: flex;
@@ -611,7 +636,6 @@ footer .link .light-link {
   justify-content: space-between;
   align-content: center;
   margin-right: 10px;
-  padding-bottom: 40px;
 }
 .menu .title h2 {
   font-family: "Shrikhand", serif;
@@ -629,6 +653,7 @@ footer .link .light-link {
   font-size: xx-large;
   -webkit-font-smoothing: antialiased;
   color: #101010;
+  cursor: pointer;
 }
 .menu .title input:checked + label::before {
   font-family: "Font Awesome 6 Free";
@@ -644,19 +669,22 @@ footer .link .light-link {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0;
+  cursor: pointer;
   animation: fill-heart 600ms ease-in-out forwards;
 }
 .menu .menu-title {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  font-size: 1rem;
-  color: black;
   text-transform: uppercase;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   width: 80px;
   border-block-end: 3px solid;
   border-image-source: linear-gradient(90deg, #99E2D0 50%, transparent 50%);
   border-image-slice: 1;
+}
+.menu .menu-title h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  color: black;
 }
 
 .menu-cards-1, .menu-cards-2, .menu-cards-3 {
@@ -664,20 +692,19 @@ footer .link .light-link {
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  gap: 18px;
-  margin-bottom: 18px;
+  gap: 12px;
 }
 .menu-cards-1 .card, .menu-cards-2 .card, .menu-cards-3 .card {
   display: flex;
   flex-direction: column;
   justify-content: left;
   align-content: center;
-  gap: 12px;
   width: 100%;
   border-radius: 15px;
   background: white;
   box-shadow: 0px 4px 15px 0px #e6e6e6;
   opacity: 0;
+  cursor: pointer;
   animation: pop 2000ms ease-in-out forwards;
 }
 .menu-cards-1 .card .card-content, .menu-cards-2 .card .card-content, .menu-cards-3 .card .card-content {
@@ -784,15 +811,22 @@ footer .link .light-link {
     justify-content: flex-start;
     align-content: center;
     align-items: center;
-    padding-right: 40px;
-    gap: 20px;
+    padding: 30px 40px 30px 25px;
+    gap: 40px;
   }
   footer .link {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-content: center;
-    gap: 10px;
+    gap: 15px;
+  }
+  footer .slim-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: flex-start;
+    margin-left: 20px;
   }
 }
 

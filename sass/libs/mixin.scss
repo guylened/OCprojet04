@@ -39,6 +39,7 @@
     font-size: xx-large;
     -webkit-font-smoothing: antialiased;
     color: $border-heart;
+    cursor: pointer;
     }
     
 }
@@ -58,7 +59,8 @@
         background-clip: text;
         -webkit-text-fill-color: transparent; 
         opacity: 0;
-        animation: fill-heart 600ms ease-in-out forwards;        
+        cursor: pointer;
+        animation: fill-heart 600ms ease-in-out forwards; 
     }
 }
 
@@ -73,7 +75,8 @@
     text-rendering: auto;
     font-size: x-large;
     -webkit-font-smoothing: antialiased;
-    color: $border-heart;    
+    color: $border-heart; 
+    cursor: pointer;   
     }
     
 }
@@ -93,6 +96,7 @@
         background-clip: text;
         -webkit-text-fill-color: transparent; 
         opacity: 0;
+        cursor: pointer;
         animation: fill-heart 600ms ease-in-out forwards;
     }
 }

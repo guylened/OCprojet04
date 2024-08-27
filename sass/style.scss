@@ -1,5 +1,4 @@
 @import "libs/reset-css.scss";
-@import "libs/responsive.scss";
 @import "libs/variable.scss";
 @import "libs/mixin.scss";
 @import "libs/fonction.scss";
@@ -9,7 +8,7 @@
 /* général */
 
 * {
-    font-family: 'Roboto', sans-serif;    
+    
 }
 
 
@@ -28,7 +27,8 @@ body {
     padding: 15px 20px;    
     background: $gradient-btn;
     border: none;
-    box-shadow: $btn-shadow;
+    box-shadow: $btn-shadow;    
+    cursor: pointer;
     @include Roboto(500,rem(16),white);    
     &:hover {
         animation: btn 100ms ease-in-out forwards;
@@ -168,21 +168,26 @@ header {
     .card {
         @include Flexbox(row,left,center);        
         align-items: center;
+        margin-left: 10px;
         gap: 20px;  
         height: 72px;
         width: 100%;
         background: $lighter-grey;
         border-radius: 20px;
-        box-shadow: $card-shadow;
-        @include Roboto(500,rem(16),black); 
+        box-shadow: $card-shadow;         
         position: relative;
-        z-index: 0;             
+        z-index: 0; 
+
+        h3 {
+            @include Roboto(500,rem(16),black);
+        }  
     }
     
+
     .bulle {
-        @include Roboto(400,rem(12),white); 
+        @include Roboto(400,rem(14),white); 
         text-align: center;        
-        padding: 3px 7px; 
+        padding: 3px 8px; 
         background-color: $primary-color;
         border-radius: 50%;
         border:none;
@@ -223,8 +228,8 @@ header {
 
     .card .badge {
             position: absolute;
-            right: 20px;
-            top: 20px;
+            right: 15px;
+            top: 15px;
             z-index: 1;
             width: 80px;
             height: 30px;             
@@ -260,30 +265,27 @@ header {
                 @include Roboto(300,rem(17),$dark-grey);
             }
         }   
-        .card-heart {
-            .heart-favicon {
+        
+        .heart-favicon {
                 @include heart-favicon-large;  
             }
             
         
-            input#favoris1:checked + label {
+        #favoris1:hover {
                 @include heart-favicon-large-2; 
             }  
 
-            input#favoris2:checked + label {
+         #favoris2:hover {
                 @include heart-favicon-large-2; 
             }  
 
-            input#favoris3:checked + label {
+         #favoris3:hover {
                 @include heart-favicon-large-2; 
             }  
 
-            input#favoris4:checked + label {
+        #favoris4:hover {
                 @include heart-favicon-large-2; 
-            }  
-        
-        }  
-       
+            }   
     }
 }
 
@@ -294,28 +296,41 @@ footer {
 
 
 @include Flexbox(column,center,flex-start); 
-gap: 18px;
+gap: 16px;
 background: $dark-grey;
-padding: 30px 18px 40px;
-@include Roboto(500,rem(16),white);
+padding: 22px 25px;
+color: $white-grey-black;
    
     h2 {
     @include Shrikhand(rem(18), white);
+    
     }
 
     .link {
     @include Flexbox(column,center,flex-start); 
-    gap: 8px; 
+    gap: 10px; 
+
+    a {
+        @include Flexbox(row,flex-start,center); 
+        align-items: center
+    }
+
+    h3 {
+        @include Roboto(500,rem(16),white);
+    }
 
     .fa-style {
         margin-right: 10px;
     }
-   
-    .light-link {
+    }
+
+    .slim-link {
+        @include Flexbox(column,center,flex-start);
+        gap: 10px;
         @include Roboto(400,rem(16),white);   
        }  
 
-    }
+    
 
 }
 
@@ -326,15 +341,12 @@ padding: 30px 18px 40px;
     align-items: center;           
     nav { 
         position: absolute;
-        left: 15px;
+        left: 17px;
     }
         
 }
 
-/*position: absolute;
-        left: 50%;
-        right:50%;
-*/
+
 .restaurants-main {
     background-color: $lighter-grey;
     @include Flexbox(column,center,center);  
@@ -351,21 +363,26 @@ padding: 30px 18px 40px;
 }
 
 
-.menu {    
+.menu { 
+    @include Flexbox(column,center,center);
     width: 100%;
     background: $lighter-grey;
-    padding: 35px 20px 0 20px;
-    border-radius: 50px 50px 0 0 ;
+    padding: 35px 15px 0 15px;
+    border-radius: 40px 40px 0 0 ;
     position :relative;
-    top: -50px;  
+    top: -40px;  
+    gap: 40px;
+    .btn {
+        align-self: center;
+        margin: 0;
+    }
     
     .title {
         @include Flexbox(row,space-between,center);
-        margin-right:10px;
-        padding-bottom: 40px;
+        margin-right:10px;        
     
         h2 {
-            @include Shrikhand (rem(28),black);
+            @include Shrikhand (rem(28),black);           
         }
     
         .heart-favicon {
@@ -379,11 +396,14 @@ padding: 30px 18px 40px;
     }
     
     .menu-title {
-        @include Roboto(300,rem(16),black);
         text-transform: uppercase; 
-        padding-bottom: 10px;
+        padding-bottom: 5px;
         width: 80px;
-        @include border-menu;        
+        @include border-menu; 
+        
+        h3 {
+            @include Roboto(300,rem(16),black);
+        }
     }
 
 }
@@ -393,17 +413,17 @@ padding: 30px 18px 40px;
 
 .menu-cards-1, .menu-cards-2, .menu-cards-3 {
     @include Flexbox(column,center,center);
-    gap: 18px;
-    margin-bottom: 18px;
+    gap: 12px;
+    
     
     .card {
-        @include Flexbox(column,left,center);        
-        gap: 12px;        
+        @include Flexbox(column,left,center);
         width: 100%;        
         border-radius: 15px;
         background: $white-grey-black;
         box-shadow: $card-menu-shadow;
         opacity: 0;
+        cursor: pointer;
         animation: pop 2000ms  ease-in-out forwards;
     }
 
@@ -480,7 +500,6 @@ padding: 30px 18px 40px;
 
 
 @media only screen and (min-width:767.9px)  {
-
     
     .menu {
        
@@ -500,13 +519,19 @@ padding: 30px 18px 40px;
     footer {
         @include Flexbox(row-reverse,flex-start,center);
         align-items: center;
-        padding-right: 40px;
-        gap: 20px;
+        padding: 30px 40px 30px 25px;
+        gap: 40px;
 
         .link {
             @include Flexbox(row,center,center);
-            gap: 10px;         
-        }        
+            gap: 15px;         
+        }    
+        
+        .slim-link {
+            @include Flexbox(row,center,flex-start);
+            margin-left: 20px;
+        
+        }
 
     }
 
