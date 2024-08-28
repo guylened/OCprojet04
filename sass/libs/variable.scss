@@ -38,6 +38,7 @@ $gradient-heart: -webkit-gradient(linear, left top, left bottom, from($primary-c
 
 /* shadows*/
 $btn-shadow: 0px 4px 10px 0px darken($white-grey-black,25);
+$btn-shadow-dark: 0px 4px 10px 0px darken($white-grey-black,40);
 $card-shadow: 0px 4px 15px 0px darken($white-grey-black,15);
 $card-menu-shadow: 0px 4px 15px 0px darken($white-grey-black,10);
 $form-shadow: 0px 4px 4px 0px darken($white-grey-black,15);
