@@ -47,18 +47,18 @@
 
 @keyframes flash {
     0% {
-        color: $primary-color;
-        text-shadow: 0 0 7px $primary-color;
+        color: $second-color;
+        text-shadow: 0 0 7px $second-color;
     }
 
     90% {
-        color: $second-color;
+        color: $primary-color;
         text-shadow: none;
     }
 
     100% {
-        color: $primary-color;
-        text-shadow: 0 0 7px $primary-color;
+        color: $second-color;
+        text-shadow: 0 0 7px $second-color;
     }
 }
 
