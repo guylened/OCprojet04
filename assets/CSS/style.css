@@ -70,19 +70,12 @@ bold: 700
  gris shadow-menu #e5e5e5 = 10%
 */
 /* shadows*/
+/*Position menu par rappoort à bannière*/
 /*radius
 card fonctionnement : 20px
 btn : 25px
 badge: 2px
 */
-@keyframes btn-checked {
-  from {
-    width: 0;
-  }
-  to {
-    width: 17%;
-  }
-}
 @keyframes btn {
   from {
     transform: scale(1);
@@ -92,30 +85,48 @@ badge: 2px
     opacity: 0.85;
   }
 }
+/*menu checked*/
+@keyframes btn-checked {
+  from {
+    width: 0;
+  }
+  to {
+    width: 17%;
+  }
+}
 /*loader*/
 @keyframes invisible {
   0% {
     opacity: 1;
   }
   95% {
-    opacity: 0.95;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+  }
+  98% {
+    opacity: 0.8;
+    width: 100%;
+    height: 0%;
   }
   100% {
-    display: none;
+    opacity: 0;
+    width: 0;
+    height: 0;
   }
 }
 @keyframes flash {
   0% {
-    color: #FF79DA;
-    text-shadow: 0 0 7px #FF79DA;
+    color: #9356DC;
+    text-shadow: 0 0 7px #9356DC;
   }
   90% {
-    color: #9356DC;
+    color: #FF79DA;
     text-shadow: none;
   }
   100% {
-    color: #FF79DA;
-    text-shadow: 0 0 7px #FF79DA;
+    color: #9356DC;
+    text-shadow: 0 0 7px #9356DC;
   }
 }
 /*card menu*/
@@ -130,7 +141,7 @@ badge: 2px
     opacity: 1;
   }
 }
-/*coeur*/
+/*heart*/
 @keyframes fill-heart {
   0% {
     background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
@@ -146,7 +157,7 @@ badge: 2px
     height: 100%;
   }
 }
-/* général */
+/* COMMUN */
 body {
   display: flex;
   flex-direction: column;
@@ -175,15 +186,12 @@ body {
   animation: btn 100ms ease-in-out forwards;
 }
 
-.title-homepage {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-size: 1.5rem;
-  color: black;
-  margin: 0 0 25px 0;
-}
-
+/*loader*/
 .loader-page {
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  font-size: 1em;
+  color: #FF79DA;
   background-color: #f6f6f6;
   width: 100%;
   height: 100%;
@@ -198,14 +206,14 @@ body {
   align-content: center;
   align-items: center;
   z-index: 4;
-  animation: invisible 3700ms 50ms ease-out forwards;
+  animation: invisible 5000ms ease-out forwards;
 }
 
 .letter {
   font-family: "Shrikhand", serif;
   font-weight: 400;
   font-size: 3em;
-  color: #9356DC;
+  color: #FF79DA;
   letter-spacing: 7px;
   animation: flash 1200ms ease-out 3 forwards;
 }
@@ -242,6 +250,62 @@ body {
   animation-delay: 975ms;
 }
 
+/* footer*/
+footer {
+  position: relative;
+  top: -40px;
+  margin-bottom: -40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: flex-start;
+  gap: 16px;
+  background: #353535;
+  padding: 22px 25px;
+  color: white;
+}
+footer h2 {
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  font-size: 1.125rem;
+  color: white;
+}
+footer .link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: flex-start;
+  gap: 10px;
+}
+footer .link a {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+}
+footer .link h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: white;
+}
+footer .link .fa-style {
+  margin-right: 10px;
+}
+footer .slim-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: flex-start;
+  gap: 10px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: white;
+}
+
+/*PAGE INDEX-ACCUEIL*/
 /* header */
 header {
   display: flex;
@@ -254,6 +318,15 @@ header {
 header img {
   height: 34px;
   width: 162px;
+}
+
+/* main */
+.title-homepage {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: black;
+  margin: 0 0 25px 0;
 }
 
 /* form*/
@@ -293,7 +366,7 @@ header img {
   color: #353535;
 }
 
-/* title */
+/* titles */
 .titles {
   text-align: center;
   padding: 30px;
@@ -378,10 +451,10 @@ header img {
   top: 25px;
 }
 
-/* restaurants*/
+/* restaurants-cards */
 .restaurants {
   background: #f6f6f6;
-  padding: 45px 18px 65px;
+  padding: 45px 18px 105px;
 }
 
 .restaurants-cards {
@@ -535,61 +608,8 @@ header img {
   animation: fill-heart 600ms ease-in-out forwards;
 }
 
-/* footer*/
-footer {
-  position: relative;
-  bottom: 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: flex-start;
-  gap: 16px;
-  background: #353535;
-  padding: 22px 25px;
-  color: white;
-}
-footer h2 {
-  font-family: "Shrikhand", serif;
-  font-weight: 400;
-  font-size: 1.125rem;
-  color: white;
-}
-footer .link {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: flex-start;
-  gap: 10px;
-}
-footer .link a {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-content: center;
-  align-items: center;
-}
-footer .link h3 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 1rem;
-  color: white;
-}
-footer .link .fa-style {
-  margin-right: 10px;
-}
-footer .slim-link {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: flex-start;
-  gap: 10px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 1rem;
-  color: white;
-}
-
-/* Pages restaurants/menus*/
+/* PAGES RESTAURANTS-MENUS */
+/*header*/
 .restaurants-header {
   display: flex;
   flex-direction: row-reverse;
@@ -826,14 +846,7 @@ footer .slim-link {
 
 /* RESPONSIVE */
 @media screen and (min-width: 767.9px) {
-  /*header*/
-  header {
-    height: 96px;
-  }
-  header img {
-    width: 200px;
-  }
-  /*Footer*/
+  /*footer*/
   footer {
     display: flex;
     flex-direction: row-reverse;
@@ -857,7 +870,13 @@ footer .slim-link {
     align-content: flex-start;
     margin-left: 20px;
   }
-  /*Page Accueil*/
+  /*Page Index-Accueil*/
+  header {
+    height: 96px;
+  }
+  header img {
+    width: 200px;
+  }
   .info {
     margin-left: 5%;
     margin-right: 5%;
@@ -877,7 +896,7 @@ footer .slim-link {
   .restaurants-cards {
     grid-template-columns: 1fr 1fr;
   }
-  /*Pages Restaurants*/
+  /*Pages Restaurants-Menus*/
   .restaurants-header {
     height: 96px;
   }
@@ -889,7 +908,7 @@ footer .slim-link {
   }
 }
 @media screen and (1024px <= width <= 1440px) {
-  /*Page Accueil*/
+  /*Page Index-Accueil*/
   .info {
     margin-left: 12.5%;
     margin-right: 12.5%;
@@ -898,7 +917,7 @@ footer .slim-link {
     padding-left: 12.5%;
     padding-right: 12.5%;
   }
-  /*Page Restaurants*/
+  /*Pages Restaurants-Menus*/
   .menu {
     width: 75%;
     padding-left: 12.5%;
