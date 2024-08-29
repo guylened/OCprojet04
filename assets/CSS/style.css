@@ -219,7 +219,7 @@ body {
 .loader-page {
   font-family: "Shrikhand", serif;
   font-weight: 400;
-  font-size: 1em;
+  font-size: 1rem;
   color: #9356DC;
   background-color: #f6f6f6;
   width: 100%;
@@ -235,48 +235,48 @@ body {
   align-content: center;
   align-items: center;
   z-index: 4;
-  animation: invisible 3.6s ease-out forwards;
+  animation: invisible 3.5s ease-out forwards;
 }
 
 .letter {
   font-family: "Shrikhand", serif;
   font-weight: 400;
-  font-size: 3em;
+  font-size: 3rem;
   color: #9356DC;
   letter-spacing: 7px;
-  animation: flash 1200ms ease-out infinite forwards;
+  animation: flash 1125ms ease-out infinite forwards;
 }
 
 .letter:nth-child(1) {
-  animation-delay: 100ms;
+  animation-delay: 125ms;
 }
 
 .letter:nth-child(2) {
-  animation-delay: 225ms;
+  animation-delay: 250ms;
 }
 
 .letter:nth-child(3) {
-  animation-delay: 350ms;
+  animation-delay: 375ms;
 }
 
 .letter:nth-child(4) {
-  animation-delay: 475ms;
+  animation-delay: 500ms;
 }
 
 .letter:nth-child(5) {
-  animation-delay: 600ms;
+  animation-delay: 625ms;
 }
 
 .letter:nth-child(6) {
-  animation-delay: 725ms;
+  animation-delay: 750ms;
 }
 
 .letter:nth-child(7) {
-  animation-delay: 850ms;
+  animation-delay: 875ms;
 }
 
 .letter:nth-child(8) {
-  animation-delay: 975ms;
+  animation-delay: 1000ms;
 }
 
 /* footer*/
@@ -801,6 +801,15 @@ header img {
   border-radius: 0 15px 15px 0;
   animation: btn-checked 300ms ease-in-out forwards;
 }
+.menu-cards-1 .card .card-content .checked-meal,
+.menu-cards-2 .card .card-content .checked-meal,
+.menu-cards-3 .card .card-content .checked-meal {
+  display: none;
+  margin-top: -15px;
+  margin-right: -15px;
+  margin-left: 15px;
+  height: 76px;
+}
 .menu-cards-1 .card .card-content .card-txt,
 .menu-cards-2 .card .card-content .card-txt,
 .menu-cards-3 .card .card-content .card-txt {
@@ -846,15 +855,6 @@ header img {
   justify-content: center;
   align-content: center;
   align-self: flex-end;
-}
-.menu-cards-1 .card .card-content .checked-meal,
-.menu-cards-2 .card .card-content .checked-meal,
-.menu-cards-3 .card .card-content .checked-meal {
-  display: none;
-  margin-top: -15px;
-  margin-right: -15px;
-  margin-left: 15px;
-  height: 76px;
 }
 
 .menu-cards-1 .card:nth-of-type(-n+4) {
