@@ -772,7 +772,7 @@ header img {
   box-shadow: 0px 4px 15px 0px #e6e6e6;
   opacity: 0;
   cursor: pointer;
-  animation: pop 2000ms ease-in-out forwards;
+  animation: pop 1500ms ease-in-out forwards;
 }
 .menu-cards-1 .card .card-content,
 .menu-cards-2 .card .card-content,
@@ -858,15 +858,15 @@ header img {
 }
 
 .menu-cards-1 .card:nth-of-type(-n+4) {
-  animation-delay: 100ms;
+  animation-delay: 200ms;
 }
 
 .menu-cards-2 .card:nth-of-type(-n+3) {
-  animation-delay: 700ms;
+  animation-delay: 800ms;
 }
 
 .menu-cards-3 .card:nth-of-type(-n+3) {
-  animation-delay: 1300ms;
+  animation-delay: 1400ms;
 }
 
 /* RESPONSIVE */
