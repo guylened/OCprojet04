@@ -24,13 +24,14 @@ $font-Roboto: 'Roboto', sans-serif;
 $primary-color: #9356DC;
 $second-color: #FF79DA;
 $third-color: #99E2D0;
+$fourth-color: #008766;
 $white-grey-black: white;
 $lighter-grey: darken($white-grey-black,3.5);
 $light-grey: darken($white-grey-black,8.2);
 $medium-grey: darken($white-grey-black,50.6);
 $dark-grey: darken($white-grey-black,79.2);
 $border-heart: darken($white-grey-black,93.7);
-$gradient-btn: linear-gradient(170deg, $second-color, $primary-color 90%);
+$gradient-btn: linear-gradient(178deg, $second-color -11%, $primary-color 127%);
 $gradient-form: linear-gradient(180deg, darken($white-grey-black,15), darken($white-grey-black,8.2) 5%);
 $gradient-heart: -webkit-gradient(linear, left top, left bottom, from($primary-color), to($second-color)); 
 
@@ -47,11 +48,7 @@ $badge-shadow: 0px 2px 4px 0px darken($white-grey-black,15);
 /*Position menu par rappoort à bannière*/
 $position: 40px;
 
-/*radius
-card fonctionnement : 20px
-btn : 25px
-badge: 2px
-*/
+
 
 
 

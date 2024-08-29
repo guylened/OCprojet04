@@ -1,51 +1,35 @@
-
-@mixin Shrikhand($f-s,$f-c) {
-    font-family: $font-Shrikhand;    
+@mixin Shrikhand($f-s, $f-c) {
+    font-family: $font-Shrikhand;
     font-weight: 400;
     font-size: $f-s;
     color: $f-c;
 }
 
-@mixin Roboto($f-w,$f-s,$f-c) {
-    font-family: $font-Roboto;    
+@mixin Roboto($f-w, $f-s, $f-c) {
+    font-family: $font-Roboto;
     font-weight: $f-w;
     font-size: $f-s;
     color: $f-c;
 }
 
-@mixin Flexbox($fx-dir,$jy-ct,$al-ct,) {
+@mixin Flexbox($fx-dir, $jy-ct, $al-ct, ) {
     display: flex;
     flex-direction: $fx-dir;
-    justify-content:$jy-ct;
-    align-content:$al-ct;    
+    justify-content: $jy-ct;
+    align-content: $al-ct;
 }
 
 @mixin border-menu {
-    border-block-end: 3px solid;
-    border-image-source: linear-gradient(90deg, $third-color 50%, transparent 50%);
-    border-image-slice : 1;
+    content: "";
+    margin-top: 5px;
+    border-top: 3px solid $third-color;
+    width: 40px;
+    display: block;
+
 }
-
-
 
 @mixin heart-favicon-xlarge {
     &::before {
-    font-family: "Font Awesome 6 Free";
-    content: "\f004";
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    font-size: xx-large;
-    -webkit-font-smoothing: antialiased;
-    color: $border-heart;
-    cursor: pointer;
-    }
-    
-}
-
-@mixin heart-favicon-xlarge-2 {
-        &::before {
         font-family: "Font Awesome 6 Free";
         content: "\f004";
         display: inline-block;
@@ -53,32 +37,47 @@
         font-variant: normal;
         text-rendering: auto;
         font-size: xx-large;
-        -webkit-font-smoothing: antialiased;        
-        font-weight: 800;        
+        -webkit-font-smoothing: antialiased;
+        color: $border-heart;
+        cursor: pointer;
+    }
+
+}
+
+@mixin heart-favicon-xlarge-2 {
+    &::before {
+        font-family: "Font Awesome 6 Free";
+        content: "\f004";
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        font-size: xx-large;
+        -webkit-font-smoothing: antialiased;
+        font-weight: 800;
         background: $gradient-heart;
         background-clip: text;
-        -webkit-text-fill-color: transparent; 
+        -webkit-text-fill-color: transparent;
         opacity: 0;
         cursor: pointer;
-        animation: fill-heart 600ms ease-in-out forwards; 
+        animation: fill-heart 600ms ease-in-out forwards;
     }
 }
 
-
 @mixin heart-favicon-large {
-   &::before {
-    font-family: "Font Awesome 6 Free";
-    content: "\f004";
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    font-size: x-large;
-    -webkit-font-smoothing: antialiased;
-    color: $border-heart; 
-    cursor: pointer;   
+    &::before {
+        font-family: "Font Awesome 6 Free";
+        content: "\f004";
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        font-size: x-large;
+        -webkit-font-smoothing: antialiased;
+        color: $border-heart;
+        cursor: pointer;
     }
-    
+
 }
 
 @mixin heart-favicon-large-2 {
@@ -90,11 +89,11 @@
         font-variant: normal;
         text-rendering: auto;
         font-size: x-large;
-        -webkit-font-smoothing: antialiased;        
-        font-weight: 800; 
+        -webkit-font-smoothing: antialiased;
+        font-weight: 800;
         background: $gradient-heart;
         background-clip: text;
-        -webkit-text-fill-color: transparent; 
+        -webkit-text-fill-color: transparent;
         opacity: 0;
         cursor: pointer;
         animation: fill-heart 600ms ease-in-out forwards;

@@ -10,8 +10,8 @@
 
 body {
     @include Flexbox(column, center, center);
-    width: 100%;    
-    background-color: $white-grey-black;        
+    width: 100%;
+    background-color: $white-grey-black;
 }
 
 
@@ -31,7 +31,7 @@ body {
         animation: btn 100ms ease-in-out forwards;
         box-shadow: $btn-shadow-dark;
     }
-    
+
 }
 
 
@@ -51,7 +51,7 @@ body {
     @include Flexbox(row, center, center);
     align-items: center;
     z-index: 4;
-    animation: invisible 3.6s ease-out forwards;   
+    animation: invisible 3.6s ease-out forwards;
 }
 
 
@@ -100,14 +100,14 @@ body {
 
 footer {
     position: relative;
-    top: -$position;    
-    margin-bottom: -$position;  
+    top: -$position;
+    margin-bottom: -$position;
     @include Flexbox(column, center, flex-start);
     gap: 16px;
     background: $dark-grey;
     padding: 22px 25px;
     color: $white-grey-black;
-    
+
 
     h2 {
         @include Shrikhand(rem(18), white);
@@ -150,6 +150,7 @@ header {
     @include Flexbox(row, center, center);
     align-items: center;
     height: 63px;
+
     img {
         height: 34px;
         width: 162px;
@@ -240,7 +241,7 @@ header {
     .card {
         @include Flexbox(row, left, center);
         align-items: center;
-        margin-left: 10px;        
+        margin-left: 10px;
         gap: 20px;
         height: 72px;
         width: calc(100% - 10px);
@@ -308,7 +309,7 @@ header {
         text-align: center;
         align-content: center;
         background: $third-color;
-        @include Roboto(500, rem(14), darken($third-color, 35));
+        @include Roboto(500, rem(14), $fourth-color);
 
     }
 
@@ -373,6 +374,7 @@ header {
     @include Flexbox(row-reverse, center, center);
     align-items: center;
     height: 63px;
+
     img {
         height: 34px;
         width: 162px;
@@ -386,13 +388,14 @@ header {
 }
 
 
-.restaurants-main {    
+.restaurants-main {
     @include Flexbox(column, center, center);
-    align-items: center;    
+    align-items: center;
 }
 
 .banner {
     width: 100%;
+
     img {
         width: 100%;
         height: 275px;
@@ -403,7 +406,7 @@ header {
 
 .menu {
     @include Flexbox(column, center, center);
-    width: 100%;    
+    width: 100%;
     background: $lighter-grey;
     padding: 35px 15px 40px 15px;
     border-radius: 40px 40px 0 0;
@@ -436,9 +439,10 @@ header {
 
     .menu-title {
         text-transform: uppercase;
-        padding-bottom: 5px;
-        width: 80px;
-        @include border-menu;
+
+        &::after {
+            @include border-menu;
+        }
 
         h3 {
             @include Roboto(300, rem(16), black);
@@ -540,111 +544,121 @@ header {
 
 /* RESPONSIVE */
 
-@media screen and (width >= 768px) {
+@media screen and (width >=768px) {
 
 
-/*footer*/
-footer {
-    @include Flexbox(row-reverse, center, center);
-    align-items: flex-end;
-    height: 115px;
-    gap: 30px;
-    
-    .link {
+    /*footer*/
+    footer {
+        @include Flexbox(row-reverse, center, center);
+        align-items: flex-end;
+        height: 115px;
+        gap: 30px;
+
+        .link {
+            @include Flexbox(row, center, center);
+            gap: 15px;
+        }
+
+        .slim-link {
+            @include Flexbox(row, center, flex-start);
+            margin-left: 10px;
+        }
+    }
+
+    /*Page Index-Accueil*/
+
+    header {
+        height: 96px;
+
+        img {
+            width: 200px;
+        }
+    }
+
+
+    .form-search {
+        box-shadow: none;
+        background: $light-grey;
+    }
+
+    .titles {
+        padding: 16px;
+
+        h1 {
+            @include Roboto(700, rem(28), black);
+
+        }
+
+        h2 {
+            @include Roboto(300, rem(18), $dark-grey);
+            margin: 0;
+        }
+    }
+
+    .info {
+        margin: 50px 5% 50px 5%;
+    }
+
+    .info-cards {
         @include Flexbox(row, center, center);
-        gap: 15px;
+        gap: 20px;
+        padding: 10px;
     }
 
-    .slim-link {
-        @include Flexbox(row, center, flex-start);
-        margin-left: 10px;
-    }
-}
+    .restaurants {
+        padding: 30px 5% calc(30px + $position) 5%;
 
-/*Page Index-Accueil*/  
-
-header {       
-    height: 96px;
-    img {
-        width: 200px;
-    }
-}
-
-
-.form-search {
-    box-shadow: none;
-    background: $light-grey;
-}
-
-.titles {
-    padding: 16px;
-   
-    h1 {
-        @include Roboto(700, rem(28), black);
-        
     }
 
-    h2 {
-        @include Roboto(300, rem(18), $dark-grey);
-        margin: 0;
+    .restaurants-cards {
+        grid-template-columns: 1fr 1fr;
     }
-}
 
-.info {
-    margin: 50px 5% 50px 5%;
-}
+    /*Pages Restaurants-Menus*/
+    .restaurants-header {
+        height: 96px;
 
-.info-cards {
-    @include Flexbox(row, center, center);
-    gap: 20px;
-    padding: 10px;
-}
-
-.restaurants { 
-    padding: 30px 5% calc(30px + $position) 5%;   
-    
-}
-
-.restaurants-cards {
-    grid-template-columns: 1fr 1fr;
-}
-
-/*Pages Restaurants-Menus*/
-.restaurants-header {
-    height: 96px;
-    img {
-        width: 200px;
+        img {
+            width: 200px;
+        }
     }
-}
 
-    .menu {        
+    .menu {
         width: 90%;
     }
 
 }
 
-@media screen and (width >= 1024px)  {
+@media screen and (width >=1024px) {
+    .banner {
+        img {
+            height: 380px;
+            object-position: center 60%;
+        }
+    }
+
     footer {
         @include Flexbox(row-reverse, flex-start, center);
         align-items: flex-end;
         height: 115px;
         padding: 30px 70px 30px 40px;
         gap: 100px;
-        
-    
-        .slim-link {         
-            
+
+
+        .slim-link {
+
             margin-left: 30px;
+            gap: 15px;
         }
     }
-   
 
-    /*Page Index-Accueil*/ 
+
+    /*Page Index-Accueil*/
     .titles {
-              
+
         h1 {
             @include Roboto(700, rem(40), black);
-            
+
         }
     }
 
@@ -652,8 +666,9 @@ header {
         margin-left: 12.5%;
         margin-right: 12.5%;
     }
-    .info-cards {        
-        gap: 30px;        
+
+    .info-cards {
+        gap: 30px;
     }
 
     .restaurants {
@@ -662,12 +677,12 @@ header {
     }
 
     .restaurants-cards {
-        row-gap: 50px ;
-        column-gap: 10% ;
+        row-gap: 50px;
+        column-gap: 10%;
     }
-    
-   /*Pages Restaurants-Menus*/
-    
+
+    /*Pages Restaurants-Menus*/
+
 
     .menu {
         width: 75%;

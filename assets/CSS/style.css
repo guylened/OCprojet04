@@ -1,10 +1,37 @@
 @charset "UTF-8";
-html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-size: 100%;
   font-weight: normal;
 }
@@ -13,7 +40,9 @@ ul {
   list-style: none;
 }
 
-button, input, select {
+button,
+input,
+select {
   margin: 0;
 }
 
@@ -21,11 +50,14 @@ html {
   box-sizing: border-box;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-img, video {
+img,
+video {
   height: auto;
   max-width: 100%;
 }
@@ -39,7 +71,8 @@ table {
   border-spacing: 0;
 }
 
-td, th {
+td,
+th {
   padding: 0;
 }
 
@@ -71,11 +104,6 @@ bold: 700
 */
 /* shadows*/
 /*Position menu par rappoort à bannière*/
-/*radius
-card fonctionnement : 20px
-btn : 25px
-badge: 2px
-*/
 @keyframes btn {
   from {
     transform: scale(1);
@@ -173,7 +201,7 @@ body {
   border-radius: 25px;
   margin: 25px;
   padding: 15px 20px;
-  background: linear-gradient(170deg, #FF79DA, #9356DC 90%);
+  background: linear-gradient(178deg, #FF79DA -11%, #9356DC 127%);
   border: none;
   box-shadow: 0px 4px 10px 0px #bfbfbf;
   cursor: pointer;
@@ -493,7 +521,7 @@ header img {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
-  color: #2c9c81;
+  color: #008766;
 }
 .restaurants-cards .card img {
   width: 100%;
@@ -707,11 +735,13 @@ header img {
 }
 .menu .menu-title {
   text-transform: uppercase;
-  padding-bottom: 5px;
-  width: 80px;
-  border-block-end: 3px solid;
-  border-image-source: linear-gradient(90deg, #99E2D0 50%, transparent 50%);
-  border-image-slice: 1;
+}
+.menu .menu-title::after {
+  content: "";
+  margin-top: 5px;
+  border-top: 3px solid #99E2D0;
+  width: 40px;
+  display: block;
 }
 .menu .menu-title h3 {
   font-family: "Roboto", sans-serif;
@@ -921,6 +951,10 @@ header img {
   }
 }
 @media screen and (width >= 1024px) {
+  .banner img {
+    height: 380px;
+    object-position: center 60%;
+  }
   footer {
     display: flex;
     flex-direction: row-reverse;
@@ -933,6 +967,7 @@ header img {
   }
   footer .slim-link {
     margin-left: 30px;
+    gap: 15px;
   }
   /*Page Index-Accueil*/
   .titles h1 {

@@ -11,18 +11,19 @@
 
 /*menu checked*/
 @keyframes btn-checked {
-   from {
+    from {
         width: 0;
     }
+
     to {
-        width: 30%;       
+        width: 30%;
     }
 }
 
 
 /*loader*/
-@keyframes invisible {   
-    0% { 
+@keyframes invisible {
+    0% {
         opacity: 1;
     }
 
@@ -38,11 +39,11 @@
         height: 0%;
     }
 
-    100% {         
+    100% {
         opacity: 0;
         width: 0;
         height: 0;
-    }  
+    }
 }
 
 @keyframes flash {
@@ -66,41 +67,40 @@
 
 @keyframes pop {
 
-    0% {         
+    0% {
         opacity: 0;
 
     }
 
-   70% { opacity: 0.9;
-}
+    70% {
+        opacity: 0.9;
+    }
 
-    100% {         
-        
+    100% {
+
         opacity: 1;
-        }
+    }
 }
 
 /*heart*/
 
-@keyframes fill-heart { 
-             
-    0% { 
-         
+@keyframes fill-heart {
+
+    0% {
+
         background: $gradient-heart;
         background-clip: text;
-        -webkit-text-fill-color: transparent;          
-        height: 0;        
-        
-    }   
-    
+        -webkit-text-fill-color: transparent;
+        height: 0;
 
-    100% { 
-       background: $gradient-heart;
+    }
+
+
+    100% {
+        background: $gradient-heart;
         background-clip: text;
         -webkit-text-fill-color: transparent;
-        opacity: 1;   
-        height: 100%;               
-    }       
+        opacity: 1;
+        height: 100%;
+    }
 }
-
-
