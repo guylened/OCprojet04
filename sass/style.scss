@@ -99,9 +99,7 @@ body {
 /* footer*/
 
 footer {
-    position: relative;
-    top: -$position;
-    margin-bottom: -$position;
+    position: relative;    
     @include Flexbox(column, center, flex-start);
     gap: 16px;
     background: $dark-grey;
@@ -277,7 +275,7 @@ header {
 
 .restaurants {
     background: $lighter-grey;
-    padding: 45px 18px calc(65px + $position);
+    padding: 45px 18px 65px;
 }
 
 .restaurants-cards {
@@ -408,6 +406,7 @@ header {
     border-radius: 40px 40px 0 0;
     position: relative;
     top: -$position;
+    margin-bottom: -$position;
     gap: 40px;
 
     .btn {
@@ -599,7 +598,7 @@ header {
     }
 
     .restaurants {
-        padding: 30px 5% calc(30px + $position) 5%;
+        padding: 30px 5% 30px 5%;
 
     }
 
