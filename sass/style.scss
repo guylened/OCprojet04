@@ -470,7 +470,7 @@ header {
         padding: 15px;
         gap: 5px;
 
-        &:active {
+        &:hover {
             .checked-meal {
                 @include Flexbox(row, center, center);
                 align-items: center;
